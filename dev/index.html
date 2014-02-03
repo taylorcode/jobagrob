@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <base href="/index.html">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <!-- build:style bundle -->
+    <!-- /build -->
+</head>
+
+<body ontouchstart>
+
+    <header ng-controller="Header">
+        <figure>
+            <a href="/">MyAuto</a>
+        </figure>
+        <nav>
+            <ul>
+                <li><a>Home</a>
+                </li>
+                <li><a>Authorization</a>
+                </li>
+                <li><a>Something</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div ng-view></div>
+
+    <footer></footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-route.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-touch.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular-cookies.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
+
+
+    <!-- build:process -->
+    <script>
+    (function () {
+
+        if('<%= environment %>' === 'dev') return window.log = console.log.bind(console);
+        window.log = function () {};
+
+    }).call(this);
+    </script>
+    <!-- /build -->
+
+    <script type="text/javascript" src="assets/scripts/src/main.js"></script>
+    
+    <!-- build:script bundle -->
+    <!-- /build -->
+
+    <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    
+</body>
+
+</html>
