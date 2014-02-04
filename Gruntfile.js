@@ -5,16 +5,26 @@ module.exports = function (grunt) {
         coffee: {
             default: {
                 expand: true,
-                cwd: 'dev/assets/coffee/src',
+                cwd: 'dev/assets',
                 src: ['**/*.coffee'],
-                dest: 'target/assets/scripts/src',
+                dest: 'target/assets',
                 ext: '.js'
             }
         },
-        compass: { // Task
+
+        compass: {
+            default: {
+                options: {
+                    sassDir: 'dev/assets/stylesheets',
+                    cssDir: 'target/assets/stylesheets'
+                }
+            }
+        },
+
+        /*compass: { // Task
             default: { // Target
                 options: { // Target options
-                    sassDir: 'dev/assets/sass',
+                    sassDir: 'dev/assets',
                     cssDir: 'target/assets/stylesheets',
                     environment: 'development'
                 }
@@ -25,7 +35,7 @@ module.exports = function (grunt) {
             //     cssDir: 'css'
             //   }
             // }
-        },
+        },*/
         htmlbuild: {
             default: {
                 src: 'dev/index.html',
@@ -51,14 +61,27 @@ module.exports = function (grunt) {
                 }
             }
         },
+        copy: {
+            default: {
+                expand: true,
+                cwd: 'dev/assets/views',
+                src: '**/*.html',
+                dest: 'target/assets/views',
+                filter: 'isFile'
+            }
+        },
         watch: {
             coffeescript: {
-                files: ['dev/assets/coffee/src/**/*.coffee'],
+                files: ['dev/assets/**/*.coffee'],
                 tasks: ['newer:coffee', 'htmlbuild'] // we can specify newer:coffee:default TODO --- WHY DOES THIS NOT WORK ON NEWER?
             },
             compass: {
-                files: ['dev/assets/sass/**/*.sass'],
+                files: ['dev/assets/**/*.sass'],
                 tasks: ['newer:compass', 'htmlbuild']
+            },
+            copyhtml: {
+                files: ['dev/assets/views/**/*.html'],
+                tasks: ['newer:copy']
             }
         }
     });

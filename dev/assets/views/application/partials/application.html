@@ -1,0 +1,56 @@
+<div>{{application}}</div>
+
+<script type="text/ng-template" id="input.html">
+    <label>
+        <span>{{elem.props.title}}</span>
+        <br>
+        {{elem.props.maxlength}}
+
+
+        <input type="{{elem.props.fieldType}}" ng-model="elem.props.value" ng-required="elem.props.required" ng-maxlength="elem.props.maxlength" maxlength="{{elem.props.maxlength}}" placeholder="{{elem.props.placeholder}}">
+    </label>
+</script>
+
+<script type="text/ng-template" id="textarea.html">
+    <span>{{elem.props.title}}</span>
+    <textarea name="myTextarea" ng-model="elem.props.value" ng-required="elem.props.required" ng-maxlength="elem.props.maxlength" maxlength="{{elem.props.maxlength}}" placeholder="{{elem.props.placeholder}}"></textarea>
+</script>
+
+<script type="text/ng-template" id="select.html">
+    <label>
+        <span>{{elem.props.title}}</span>
+        <select ng-model="elem.selection" ng-init="elem.selection = elem.selection || elem.props.opts[0].val" ng-options="opt.val as opt.val for opt in elem.props.opts">
+        </select>
+    </label>
+</script>
+
+<script type="text/ng-template" id="radio.html">
+        <span>{{elem.props.title}}</span>
+        <form name="myForm" ng-init="elem.selection = elem.selection || elem.props.opts[0].val">
+            <label ng-repeat="radio in elem.props.opts" for="id-{{$index}}">
+                <span>{{radio.val}}</span>
+                <input type="radio" ng-model="elem.selection" ng-value="radio.val" id="id-{{$index}}">
+            </label>
+        </form>
+</script>
+
+<script type="text/ng-template" id="checkbox.html">
+        <span>{{elem.props.title}}</span>
+        <form name="myForm">
+            <label ng-repeat="checkbox in elem.props.opts" for="id-{{$index}}">
+                <span>{{checkbox.val}}</span>
+                <input type="checkbox" id="id-{{$index}}" ng-model="checkbox.checked">
+            </label>
+        </form>
+</script>
+
+<form class="form" name="form">
+    <fieldset ng-repeat="f in application.fieldsets">
+        <legend>{{f.legend}}</legend>
+        <div ng-repeat="elem in f.elems track by $index">
+            <div ng-include="elem.props.template + '.html'"></div>
+        </div>
+    </fieldset>
+</form>
+
+<button ng-click="saveApp(application)">convert</button>

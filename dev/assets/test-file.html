@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Jobagrob</title> 
+    <meta name="description" content="">
+    <link rel="stylesheet" href="assets/stylesheets/styles.css" type="text/css" media="screen">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Bitter:400,700,400italic' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+<header></header>
+<div id="wrapper" class="mobile-reset" ng-view></div>
+<footer></footer>
+<link href='http://fonts.googleapis.com/css?family=Bitter:400,700,400italic' rel='stylesheet' type='text/css'>
+
+<!-- libraries -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
+
+
+
+
+<span></span>
+<button id="yes">Yes!</button>
+<button id="no">No!</button>
+
+
+
+
+<script>
+
+var questions = [
+'Do you have experience with jQuery?', //0
+'Do you know C++?', //1
+'Do you know computer hardware?', //2
+'Do you know CSS?', //3
+'Do you know Java?', //4
+'Do you know circuit design?', //5
+'Do you know HTML?', //6
+'do you know c#?', //7
+'Do you have a web-related degree?', //8
+'Do you know how to build electronic things?', //9
+'do you know how processors are built?', //10
+'do you know how to make a logic board?', //11
+'Do you have 3+ years experience in hardware manufacturing?', //12
+'Do you know how to develop Native apps?', //13
+'Do you know SASS?', //14
+'Do you know JavaScript?', //15
+'Do you know how to program?' //16
+];
+
+var applications = [
+    [{
+        question: questions[0],
+        weight: .8
+    }, {
+        question: questions[3],
+        weight: .8
+    }, {
+        question: questions[6],
+        weight: .8
+    }, {
+        question: questions[8],
+        weight: .8
+    }, {
+        question: questions[14],
+        weight: .8
+    }, {
+        question: questions[15],
+        weight: .8
+    }, {
+        question: questions[16],
+        weight: .8
+    }],
+    [{
+        question: questions[1],
+        weight: .8
+    }, {
+        question: questions[4],
+        weight: .8
+    }, {
+        question: questions[7],
+        weight: .8
+    }, {
+        question: questions[13],
+        weight: .8
+    }, {
+        question: questions[16],
+        weight: .8
+    }], 
+    [{
+        question: questions[2],
+        weight: .8
+    }, {
+        question: questions[5],
+        weight: .8
+    }, {
+        question: questions[9],
+        weight: .8
+    }, {
+        question: questions[10],
+        weight: .8
+    }, {
+        question: questions[11],
+        weight: .8
+    }, {
+        question: questions[12],
+        weight: .8
+    }]
+]
+
+var profile = [];
+
+/* get all apps that have this question */
+function getAppsWithQuestion (question) {
+    var appHasQuestion = false,
+        appsWithQuestion = [];
+    _.each(applications, function (app) {
+
+        _.each(app, function (q) {
+            if(q.question === question) appHasQuestion = true;
+        })
+
+        if(appHasQuestion) appsWithQuestion.push(app);
+        appHasQuestion = false;
+    });
+    return appsWithQuestion;
+}
+
+
+function getAverageQuestionWeightFromApps(appsWithQuestion, question) {
+    var questionWeightSum = 0;
+    _.each(appsWithQuestion, function (app) {
+        _.each(app, function (q) {
+            if(q.question === question) questionWeightSum += q.weight;
+        });
+    })
+    return questionWeightSum/appsWithQuestion.length;
+}
+
+
+var appsWithQuestion = getAppsWithQuestion(questions[16]);
+
+
+console.log(getAverageQuestionWeightFromApps(appsWithQuestion, questions[16]));
+
+
+
+
+
+/* 
+
+
+
+
+/*
+var questions = ['Do you have experience with jQuery?', 'Do you know C++?', 'Do you know computer hardware?', 'Do you know CSS?', 'Do you know Java?', 'Do you know circuit design?', 'Do you know HTML?', 'do you know c#?', 'Do you have a web-related degree?', 'Do you know how to build electronic things?', 'do you know how processors are built?', 'do you know how to make a logic board?','Do you have 3+ years experience in hardware manufacturing?', 'Do you know how to develop Native apps?', 'Do you know SASS?', 'Do you know JavaScript?', 'Do you know how to program?'];
+
+var applications = [
+    ['Do you have experience with jQuery?', 'Do you know CSS?', 'Do you know HTML?', 'Do you have a web-related degree?', 'Do you know how to program?', 'Do you know SASS?'],
+    ['Do you know C++?', 'Do you know Java?', 'do you know c#?', 'Do you know how to develop Native apps?', 'Do you know how to program?'],
+    ['Do you know how to program?', 'Do you know computer hardware?', 'Do you know circuit design?', 'Do you know how to build electronic things?', 'do you know how processors are built?', 'do you know how to make a logic board?', 'Do you have 3+ years experience in hardware manufacturing?']
+];*/
+/*
+var profile = [];
+
+function start() {
+    
+    if(!profile.length) return false;
+    
+    var questionsArr = [];
+    var profileArr = (function () {
+        profileArr = [];
+        for(var i=0; i<profile.length; i++) {
+            profileArr.push(profile[i].q);
+        }
+        return profileArr;
+    })();
+
+
+    var appsWithQuestion, alignment;
+    
+    // returns the questinos on the app if found, otherwise false
+    function appHasQuestion(question) {
+        for(var n=0; n<applications.length; n++) {
+            for(var i=0; i<applications[n].length; i++) {
+                if(applications[n][i] === question) return applications[n][i];
+            }
+        }
+        return false;
+    }
+
+    
+    function getQuestionAlignment(question) {            
+        appsWithQuestion = [], alignment = 0, appQuestion;
+
+        var appQuestion = appHasQuestion(question);
+        if(appQuestion) appsWithQuestion = appsWithQuestion.concat(appQuestion.question);
+        
+       
+        for(var q=0; q<appsWithQuestion.length; q++) {
+            for(var e=0; e<profile.length; e++) {
+                if(profile[e].q === appsWithQuestion[q]) {
+                    if(profile[e].ans) alignment++;
+                    else alignment--;
+                    
+                }
+            }
+        }
+        if(!alignment) alignmentRatio = 0;
+        else alignmentRatio = alignment/appsWithQuestion.length;
+        return {
+            question: question,
+            alignment: alignmentRatio
+        }
+    }
+
+    
+    questions = _.difference(questions, profileArr);
+    
+    for(var i=0; i<questions.length; i++) {
+        questionsArr.push(getQuestionAlignment(questions[i]));
+    }
+
+    return questionsArr;   
+}
+
+console.log(JSON.stringify(start()));
+
+function getHighest() {
+    var ranks = start(),
+        highestAlignment = -9999999,
+        highestQ;
+    
+    if(!ranks) return questions[0];
+    
+    for(var i=0; i<ranks.length; i++) {
+        if(ranks[i].alignment > highestAlignment) {
+            highestAlignment = ranks[i].alignment;
+            highestQ = ranks[i].question;
+        }
+    }
+    return highestQ;
+}
+
+function showHighestInDom() {
+    $('span').html(getHighest());
+}
+
+showHighestInDom();
+
+$('button').click(function() {
+    var answer = $(this).attr('id') === 'yes' ? true: false;
+    profile.push({
+        q: $('span').html(),
+        ans: answer
+    });
+    showHighestInDom();
+});
+
+*/
+
+
+</script>
+
+
+</body>
+</html>
+

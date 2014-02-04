@@ -1,0 +1,147 @@
+@import "compass/reset"
+@import "compass/css3"
+@import "variables"
+
+/* for dev purposes */
+*
+	//@include box-shadow(#aaa 0 0 0 1px inset)
+
+
+/* custom mixins */
+@mixin font-bitter
+	font-family: 'Bitter', serif
+	font-weight: 400
+
+@mixin font-open-sans
+	font-family: 'Open Sans', sans-serif
+
+/* additional resets */
+html, body
+	margin: 0
+	padding: 0
+	height: 100%
+	min-width: 640px
+
+input:focus, select:focus, textarea:focus, button:focus, a:focus
+	outline: none
+
+/* frame */
+body
+	background: $background
+	zoom: 1
+	font-family: sans-serif
+	*
+		overflow: hidden
+	h1, h2, h3, h4, h5, span, em, strong, b, u, label, form, input
+		overflow: visible
+	border-top: 5px solid $light-green
+
+
+#wrapper
+	width: 960px
+	max-width: 100%
+	margin: 0 auto
+	overflow: hidden
+
+/* global styles */
+h1
+	font-size: 35px
+	color: $light-green
+
+h2
+	font-size: 24px
+
+h3
+	font-size: 22px
+	color: $black
+h4
+	font-size: 18px
+
+h5
+	font-size: 16px
+
+h1, h3
+	@include font-bitter
+
+/** reuseable (app-scope) classes **/
+
+/* wrappers */
+.mid-wrapper
+	text-align: center
+	position: relative
+
+/* buttons */
+.button
+	cursor: pointer
+	background: $light-green
+	border: 0
+	border-bottom: 2px solid $dark-green
+	&:disabled
+		background: $light-green
+		color: $dark-green
+	border-bottom: 2px solid $dark-green
+	color: white
+	font-size: 16px
+	@include font-bitter
+	margin: 0
+
+.text-link
+	color: $light-green
+	&:active
+		color: $dark-green
+
+/* inputs */
+.stacked-inputs
+	input
+		@include box-sizing(border-box)
+		padding: 10px
+		width: 100%
+		border-radius: 3px
+		&:not([type=submit]) // CSS3
+			background: $light-gray
+			//border-top: 1px solid #e2e2e2
+			//border-left: 1px solid #ececec
+			//border-right: 1px solid #ececec
+			//border-bottom: 1px solid #eee
+			border: 1px solid $light-accent-gray
+			font-size: 16px
+			@include font-open-sans
+			margin: 0
+			&:focus
+				background: #fdfdfd
+
+	label
+		display: block
+		padding-bottom: 8px
+
+	.split-inputs-wrapper
+		@include column-count(2)
+		@include column-gap(10px)
+		overflow: visible
+
+/* subject to change - use device queries */
+$width-name: max-width
+$mobile-width: 450px
+
+/* media queries */
+@media screen and ($width-name : $mobile-width)
+	h1
+		font-size: 28px
+
+	h2
+		font-size: 22px
+
+	h3
+		font-size: 20px
+
+	html, body
+		width: auto
+		min-width: 0
+
+	.mobile-reset
+		display: block !important
+		width: auto !important
+		float: none !important
+		clear: none !important
+
+@import "../views/**/*.sass"
