@@ -55,6 +55,70 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "target/assets/scripts/routes.js",
+			"settings":
+			{
+				"buffer_size": 967,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Gruntfile.js",
+			"settings":
+			{
+				"buffer_size": 3728,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "web.js",
+			"settings":
+			{
+				"buffer_size": 2779,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/taylormcintyre/Documents/projects/jobagrob-old/server/routes.js",
+			"settings":
+			{
+				"buffer_size": 4262,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/taylormcintyre/Documents/projects/jobagrob-old/server/schemas/account-model.js",
+			"settings":
+			{
+				"buffer_size": 2485,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/taylormcintyre/Documents/projects/jobagrob-old/server.js",
+			"settings":
+			{
+				"buffer_size": 1955,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "config.rb",
+			"settings":
+			{
+				"buffer_size": 23,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "dev/assets/scripts/routes.coffee",
+			"settings":
+			{
+				"buffer_size": 830,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -80,6 +144,15 @@
 	},
 	"file_history":
 	[
+		"/Users/taylormcintyre/Documents/projects/jobagrob-old/server/schemas/account-abstract-model.js",
+		"/Users/taylormcintyre/Documents/projects/jobagrob/README.md",
+		"/Users/taylormcintyre/Documents/projects/jobagrob/package.json",
+		"/Users/taylormcintyre/Documents/projects/jobagrob/dev/index.html",
+		"/Users/taylormcintyre/Documents/projects/jobagrob/target/index.html",
+		"/Users/taylormcintyre/Documents/projects/jobagrob/Procfile",
+		"/Users/taylormcintyre/Documents/projects/jobagrob/node_modules/grunt-sync/tasks/sync.js",
+		"/Users/taylormcintyre/Documents/projects/jobagrob/dev/assets/views/main/stylesheets/_main.sass",
+		"/Users/taylormcintyre/Documents/projects/jobagrob/target/assets/stylesheets/styles.css",
 		"/Users/taylormcintyre/Documents/projects/taylor-portfolio/dev/scripts/plugins/angular-scrollto.js",
 		"/Users/taylormcintyre/Documents/projects/taylor-portfolio/dev/index.html",
 		"/Users/taylormcintyre/Documents/projects/taylor-portfolio/dev/scripts/plugins/angular-anchor-scroll.js",
@@ -157,7 +230,6 @@
 		"/Users/taylormcintyre/Documents/projects/jobagrob/views/credentials/partials/credentials.html",
 		"/Users/taylormcintyre/Documents/projects/jobagrob/views/credentials/controllers/credentials.js",
 		"/Users/taylormcintyre/Documents/projects/jobagrob/views/credentials/controllers/credentials.coffee",
-		"/Users/taylormcintyre/Documents/projects/jobagrob/README.md",
 		"/Users/taylormcintyre/Documents/projects/jobagrob/mockups/responsive.png",
 		"/Users/taylormcintyre/Documents/projects/jobagrob/mockups/Meeting notes/IMG_4873.JPG",
 		"/Users/taylormcintyre/Documents/projects/jobagrob/mockups/Meeting notes/IMG_4872.JPG",
@@ -199,15 +271,7 @@
 		"/Users/taylormcintyre/Documents/projects/Jobagrob/views/generator/controllers/main.js",
 		"/Users/taylormcintyre/Documents/projects/Jobagrob/views/generator/controllers/main.coffee",
 		"/Users/taylormcintyre/Documents/projects/Jobagrob/views/main/controllers/main.js",
-		"/Users/taylormcintyre/Documents/projects/Jobagrob/modules/generator/generator.html",
-		"/Users/taylormcintyre/Documents/projects/Jobagrob/js/something.coffee",
-		"/Users/taylormcintyre/Documents/projects/Jobagrob/js/routes.js",
-		"/Users/taylormcintyre/Library/Caches/Cleanup At Startup/com.fetchsoftworks.Fetch/Fetch Temporary Folder 99/receipt.php",
-		"/Users/taylormcintyre/Library/Caches/Cleanup At Startup/com.fetchsoftworks.Fetch/Fetch Temporary Folder 64/orders.html",
-		"/Users/taylormcintyre/Library/Caches/Cleanup At Startup/com.fetchsoftworks.Fetch/Fetch Temporary Folder 65/completed.html",
-		"/Users/taylormcintyre/Library/Caches/Cleanup At Startup/com.fetchsoftworks.Fetch/Fetch Temporary Folder 56/index.php",
-		"/Users/taylormcintyre/Library/Caches/Cleanup At Startup/com.fetchsoftworks.Fetch/Fetch Temporary Folder 24/main.js",
-		"/Users/taylormcintyre/Desktop/whippex_new/css/main.css"
+		"/Users/taylormcintyre/Documents/projects/Jobagrob/modules/generator/generator.html"
 	],
 	"find":
 	{
@@ -215,9 +279,10 @@
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 93.0,
 		"where_history":
 		[
+			"/Users/taylormcintyre/Documents/projects/jobagrob",
 			"/Users/taylormcintyre/Documents/projects/taylor-portfolio",
 			""
 		]
@@ -227,6 +292,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"module",
+			"grunt.file.copy",
+			"copy",
 			"useful",
 			"optional arguments",
 			"code",
@@ -351,10 +419,7 @@
 			"large-screen",
 			"$large-screen-golden",
 			"$small-screen-golden",
-			"960",
-			"small-golden",
-			"($golden",
-			"small-screen-golden"
+			"960"
 		],
 		"highlight": false,
 		"in_selection": false,
@@ -372,8 +437,230 @@
 	"groups":
 	[
 		{
+			"selected": 2,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "target/assets/scripts/routes.js",
+					"settings":
+					{
+						"buffer_size": 967,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								531,
+								531
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "Gruntfile.js",
+					"settings":
+					{
+						"buffer_size": 3728,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								569,
+								569
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "web.js",
+					"settings":
+					{
+						"buffer_size": 2779,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								371,
+								371
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/Users/taylormcintyre/Documents/projects/jobagrob-old/server/routes.js",
+					"settings":
+					{
+						"buffer_size": 4262,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								814,
+								814
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/Users/taylormcintyre/Documents/projects/jobagrob-old/server/schemas/account-model.js",
+					"settings":
+					{
+						"buffer_size": 2485,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 658.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/Users/taylormcintyre/Documents/projects/jobagrob-old/server.js",
+					"settings":
+					{
+						"buffer_size": 1955,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "config.rb",
+					"settings":
+					{
+						"buffer_size": 23,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								23,
+								23
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "dev/assets/scripts/routes.coffee",
+					"settings":
+					{
+						"buffer_size": 830,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								576,
+								576
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CoffeeScript/Syntaxes/CoffeeScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],

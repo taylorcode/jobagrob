@@ -46,8 +46,8 @@ module.exports = function (grunt) {
                     relative: true,
                     scripts: {
                         bundle: [
-                            'target/assets/scripts/**/*.js',
-                            '!target/assets/scripts/src/main.js'
+                            'target/assets/**/*.js',
+                            '!target/assets/scripts/routes.js'
                         ]
                     },
                     styles: {
@@ -61,29 +61,58 @@ module.exports = function (grunt) {
                 }
             }
         },
-        copy: {
+        // copy: {
+        //     default: {
+        //         expand: true,
+        //         cwd: 'dev/assets',
+        //         src: '**',
+        //         dest: 'target/assets',
+        //         filter: 'isFile'
+        //     }
+        // },
+
+        sync: {
             default: {
-                expand: true,
-                cwd: 'dev/assets/views',
-                src: '**/*.html',
-                dest: 'target/assets/views',
-                filter: 'isFile'
+                files: [{
+                    cwd: 'dev/assets',
+                    src: ['**', '!**/*.coffee', '!**/*.sass'], // sync everytthing but coffee and sass files
+                    dest: 'target/assets'
+                }]
             }
         },
+
+        delete_sync: {
+            default: {
+                cwd: 'target/assets',
+                src: ['**', '!**/*.js', '!**/*.css'], // sync everytthing but js and css files
+                syncWith: 'dev/assets'
+            }
+        },
+
+
         watch: {
             coffeescript: {
                 files: ['dev/assets/**/*.coffee'],
-                tasks: ['newer:coffee', 'htmlbuild'] // we can specify newer:coffee:default TODO --- WHY DOES THIS NOT WORK ON NEWER?
+                tasks: ['coffee', 'htmlbuild']
             },
             compass: {
                 files: ['dev/assets/**/*.sass'],
-                tasks: ['newer:compass', 'htmlbuild']
+                tasks: ['compass']
             },
-            copyhtml: {
-                files: ['dev/assets/views/**/*.html'],
-                tasks: ['newer:copy']
+            stylesheets: {
+                files: ['dev/assets/stylesheets/**/*.sass'],
+                tasks: ['htmlbuild'] 
+            },
+            sync_assets: {
+                files: ['dev/assets/**'],
+                tasks: ['sync', 'delete_sync']
+            },
+            index: {
+                files: ['dev/index.html'],
+                tasks: ['htmlbuild']
             }
         }
+        
     });
 
     // load all tasks declared in devDependencies
@@ -94,5 +123,5 @@ module.exports = function (grunt) {
     });
 
     // setup our workflow
-    grunt.registerTask('default', ['watch']);
+    grunt.registerTask('default', ['coffee', 'compass', 'sync', 'delete_sync', 'htmlbuild', 'watch']);
 }

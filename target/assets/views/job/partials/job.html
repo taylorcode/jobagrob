@@ -1,0 +1,14 @@
+<form ng-submit="createJob(job)">
+	<input type="text" ng-model="job.title">
+	<textarea ng-model="job.shortDescription"></textarea>
+	<textarea ng-model="job.longDescription"></textarea>
+	<div>Type:</div>
+
+	<select ng-model="job.type" ng-init="job.type = job.type || info.types[0]" ng-options="type as type for type in info.types">
+	</select>
+
+	<div>Industry:</div>
+	<select ng-model="job.industry" ng-init="job.industry = job.industry || info.industries[0]" ng-options="industry as industry for industry in info.industries">
+	</select>
+	<input type="submit" value="Create Job">
+</form>

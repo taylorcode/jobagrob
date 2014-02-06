@@ -1,21 +1,23 @@
 var express = require('express'),
     app = express(),
     logfmt = require('logfmt'),
-    port;/*,
+    port,
     mongoose = require('mongoose'),
-    Account = require('./server/schemas/account-model'),
+    handler = require('restify-errors');
+    /*Account = require('./server/schemas/account-model'),
     passport = require('passport'),
     LocalStrategy = require('passport-local').Strategy,
-    routes = require('./server/routes'),
-    handler = require('restify-errors');
+    routes = require('./server/routes');
+
+
+*/
 
 mongoose.connect('mongodb://localhost/jobagrob', function (err) {
     if(err) throw err;
-    console.log('Successfully connected to Jobagrob Test MongoDB.');
+    console.log('Successfully connected to Jobagrob MongoDB.');
 });
 
-*/
-app.configure(function() {
+app.configure(function () {
 
   app.use(express.static('target'));
   //app.use(express.cookieParser());
@@ -101,5 +103,5 @@ app.use(function(req, res) {
 var port = Number(process.env.PORT || 5000);
 
 app.listen(port, function() {
-  console.log("Listening on " + port);
+  console.log('Listening on ' + port);
 });

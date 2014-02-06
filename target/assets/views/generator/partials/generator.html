@@ -1,0 +1,82 @@
+<!-- attributes and options are accessible in "elem" object -->
+
+<script type="text/ng-template" id="text.html">
+    <span>Title:</span>
+    <input type="text" ng-model="elem.props.title">
+    <span>Placeholder:</span>
+    <input ng-model="elem.props.placeholder">
+    <span>Required:</span>
+    <span>Required</span><input type="checkbox" ng-init="elem.props.required=true" ng-model="elem.props.required">
+    <input type="number" ng-model="elem.props.maxlength">
+</script>
+
+<script type="text/ng-template" id="input.html">
+    <div ng-include="'text.html'" ng-init="elem.props.maxlength = 100"></div>
+    <span>Input Type:</span>
+    <select ng-model="elem.props.fieldType" ng-init="elem.props.fieldType = 'text'">
+        <option>text</option>
+        <option>email</option>
+        <option>number</option>
+    </select>
+</script>
+
+<script type="text/ng-template" id="textarea.html">
+    <div ng-include="'text.html'" ng-init="elem.props.maxlength = 500"></div>
+</script>
+
+<script type="text/ng-template" id="options.html">
+        <span>Title</span>
+        <input type="text" ng-model="elem.props.title">
+        <form name="myForm">
+            <label ng-repeat="opt in elem.props.opts" for="id-{{$index}}">
+                <label>
+                    <div>{{opt.val}}</div>
+                    <button ng-click="removeOpt(elem, opt)">Remove</button>
+                </label>
+            </label>
+            <input type="text" ng-model="elem.newOpt">
+            <button ng-click="addOpt(elem, elem.newOpt)">Add Option</button>
+        </form>
+</script>
+
+<form class="form" name="form">
+    <fieldset ng-repeat="f in application.fieldsets" ng-click="addToFieldset(f)">
+        <legend ng-model="f.legend">
+            <input type="text" placeholder="Title of Question Group..." ng-model="f.legend"></legend>
+    
+        <div ng-repeat="elem in f.elems track by $index">
+            <div>
+                <label for="input">
+                    <span>Input</span>
+                    <input type="radio" ng-model="elem.props.template" value="input" id="input">
+                </label>
+                <label for="textarea">
+                    <span>Textarea</span>
+                    <input type="radio" ng-model="elem.props.template" value="textarea" id="textarea">
+                </label>
+                <label for="select">
+                    <span>Select</span>
+                    <input type="radio" ng-model="elem.props.template" value="select" id="select">
+                </label>
+                <label for="radio">
+                    <span>Radio</span>
+                    <input type="radio" ng-model="elem.props.template" value="radio" id="radio">
+                </label>
+                <label for="checkbox">
+                    <span>Checkbox</span>
+                    <input type="radio" ng-model="elem.props.template" value="checkbox" id="checkbox">
+                </label>
+            </div>
+            <button ng-click="removeElem(f.elems, elem)">Remove</button>
+            <div ng-include="elem.props.template | getTemplate"></div>
+        </div>
+
+        <button ng-click="addElem(f)">New</button>
+    </fieldset>
+
+    <button ng-click="addFieldset()">Add Fieldset</button>
+    <button ng-click="serialize(application)">Serialize</button>
+    <button ng-click="createApplication(application)">Create</button>
+</form>
+
+
