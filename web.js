@@ -3,15 +3,14 @@ var express = require('express'),
     logfmt = require('logfmt'),
     port,
     mongo = require('mongodb');
-    /*,
     mongoose = require('mongoose'),
-    handler = require('restify-errors');*/
+    passport = require('passport');
+
+    //handler = require('restify-errors');*/
     /*Account = require('./server/schemas/account-model'),
     passport = require('passport'),
     LocalStrategy = require('passport-local').Strategy,
     routes = require('./server/routes');
-
-
 */
 /*
 mongoose.connect('mongodb://localhost/jobagrob', function (err) {
@@ -44,27 +43,6 @@ app.configure(function () {
 
 });
 
-/*
-
-app.configure(function () {
-    // static - all our js, css, images, etc go into the assets path
-    app.use('/dev', express.static('/dev'));
-    //If we get here then the request for a static file is invalid so we may as well stop here
-    app.use('/dev', function (req, res, next) {
-        res.send(404);
-    });
-
-
-    app.get('/customers/:id', function (req, res) {
-        // return data for customer....
-    });
-
-    // This route deals enables HTML5Mode by forwarding missing files to the index.html
-    app.all('/*', function (req, res) {
-        res.sendfile('dev/index.html');
-    });
-});
-*/
 
 /*
 function clientErrorHandler(err, req, res, next) {
