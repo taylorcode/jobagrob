@@ -1,29 +1,20 @@
 (function() {
   jobagrob.factory('signUp', function($resource) {
-    return $resource('http://localhost:port/api/signup', {
-      port: ':8080'
-    });
+    return $resource('api/signup');
   }).factory('logIn', function($resource) {
-    return $resource('http://localhost:port/api/login', {
-      port: ':8080'
-    });
+    return $resource('api/login');
   }).factory('checkLogIn', function($resource) {
-    return $resource('http://localhost:port/api/checklogin', {
-      port: ':8080'
-    });
+    return $resource('api/checklogin');
   }).factory('job', function($resource) {
-    return $resource('http://localhost:port/api/jobs/:id', {
-      port: ':8080',
+    return $resource('api/jobs/:id', {
       id: '@id'
     });
   }).factory('generator', function($resource) {
-    return $resource('http://localhost:port/api/jobs/:id/generator', {
-      port: ':8080',
+    return $resource('api/jobs/:id/generator', {
       id: '@job'
     });
   }).factory('application', function($resource) {
-    return $resource('http://localhost:port/api/jobs/:id/application', {
-      port: ':8080',
+    return $resource('api/jobs/:id/application', {
       id: '@id'
     });
   }).factory('extract', function() {

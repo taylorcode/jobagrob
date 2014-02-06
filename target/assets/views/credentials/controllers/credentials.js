@@ -1,7 +1,7 @@
 (function() {
   jobagrob.controller('SignUp', function($scope, signUp) {
     var createAccount;
-    console.log('Sign Up');
+    log('Sign Up');
     $scope.template = 'signup';
     createAccount = function(account) {
       return signUp.save(_.omit(account, ['confirmPassword']));
@@ -17,7 +17,6 @@
   });
 
   jobagrob.controller('LogIn', function($scope, logIn, checkLogIn, $location) {
-    console.log('Log In');
     $scope.template = 'login';
     $scope.logIn = function(credentials) {
       return logIn.save(credentials, function() {

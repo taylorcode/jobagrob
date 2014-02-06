@@ -1,20 +1,20 @@
 jobagrob.factory 'signUp', ($resource) ->
-	$resource 'http://localhost:port/api/signup', port: ':8080'
+	$resource 'api/signup'
 
 .factory 'logIn', ($resource) ->
-	$resource 'http://localhost:port/api/login', port: ':8080'
+	$resource 'api/login'
 
 .factory 'checkLogIn', ($resource) ->
-	$resource 'http://localhost:port/api/checklogin', port: ':8080'
+	$resource 'api/checklogin'
 
 .factory 'job', ($resource) ->
-  $resource 'http://localhost:port/api/jobs/:id', port: ':8080', id: '@id'
+  $resource 'api/jobs/:id', id: '@id'
 
 .factory 'generator', ($resource) ->
-	$resource 'http://localhost:port/api/jobs/:id/generator', port: ':8080', id: '@job'
+	$resource 'api/jobs/:id/generator', id: '@job'
 
 .factory 'application', ($resource) ->
-  $resource 'http://localhost:port/api/jobs/:id/application', port: ':8080', id: '@id'
+  $resource 'api/jobs/:id/application', id: '@id'
 
 .factory 'extract', () ->
   application: (a) ->

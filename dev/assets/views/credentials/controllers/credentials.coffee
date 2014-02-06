@@ -1,5 +1,5 @@
-jobagrob.controller('SignUp', ($scope, signUp) ->
-	console.log 'Sign Up'
+jobagrob.controller 'SignUp', ($scope, signUp) ->
+	log 'Sign Up'
 
 	$scope.template = 'signup'
 
@@ -14,10 +14,8 @@ jobagrob.controller('SignUp', ($scope, signUp) ->
 		company.type = 'company'
 		createAccount company
 
-)
 
-jobagrob.controller('LogIn', ($scope, logIn, checkLogIn, $location) ->
-	console.log 'Log In'
+jobagrob.controller 'LogIn', ($scope, logIn, checkLogIn, $location) ->
 
 	$scope.template = 'login'
 
@@ -31,4 +29,3 @@ jobagrob.controller('LogIn', ($scope, logIn, checkLogIn, $location) ->
 
 	$scope.checkLogIn = () ->
 		checkLogIn.save(id: 'sf3rsfsdfsfdkj')
-)

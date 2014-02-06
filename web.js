@@ -4,20 +4,12 @@ var express = require('express'),
     port,
     mongo = require('mongodb');
     mongoose = require('mongoose'),
-    passport = require('passport');
-
-    //handler = require('restify-errors');*/
-    /*Account = require('./server/schemas/account-model'),
+    passport = require('passport'),
+    handler = require('restify-errors'),
+    Account = require('./server/schemas/account-model'),
     passport = require('passport'),
     LocalStrategy = require('passport-local').Strategy,
     routes = require('./server/routes');
-*/
-/*
-mongoose.connect('mongodb://localhost/jobagrob', function (err) {
-    if(err) throw err;
-    console.log('Successfully connected to Jobagrob MongoDB.');
-});*/
-
 
 var mongoUri = process.env.MONGOLAB_URI || process.env.MONGOHQ_URL || 'mongodb://localhost/jobagrob';
 
@@ -30,21 +22,22 @@ mongo.Db.connect(mongoUri, function (err, db) {
 app.configure(function () {
 
   app.use(express.static('target'));
-  //app.use(express.cookieParser());
+
+  app.use(express.cookieParser());
+
   app.use(express.bodyParser());
-  //app.use(express.session({ secret: 'keyboard cat' }));
-  //app.use(passport.initialize());
-  //app.use(passport.session());
-  //app.use(app.router);
-  //app.use(clientErrorHandler);
-  //routes.setup(app);
+
+  app.use(express.session({ secret: 'keyboard cat' }));
+  app.use(passport.initialize());
+  app.use(passport.session());
+  app.use(app.router);
+  app.use(clientErrorHandler);
+  routes.setup(app);
 
   app.use(logfmt.requestLogger());
 
 });
 
-
-/*
 function clientErrorHandler(err, req, res, next) {
   if(err.statusCode) return res.send(err.statusCode, err);
   if(err.name === 'ValidationError') return res.send(400, err);
@@ -72,8 +65,6 @@ passport.use(new LocalStrategy({
   }
 ));
 
-
-
 passport.serializeUser(function(account, done) {
     done(null, account._id);
 });
@@ -83,10 +74,9 @@ passport.deserializeUser(function(id, done) {
     done(err, account);
   });
 });
-*/
 
 app.use(function(req, res) {
-    res.sendfile('index.html');
+    res.sendfile('target/index.html');
 });
 
 var port = Number(process.env.PORT || 5000);
