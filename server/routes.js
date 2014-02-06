@@ -74,11 +74,8 @@ function setup(app) {
 
 	app.post('/api/login', logOut, passport.authenticate('local'), function (req, res, next) {
 
-	    Account.findById(req.user._id, function (err, account) {
-	    	if(err) return next(err);
-	    	res.send(formatResponse('logged in.'));
-	    })
-		
+		res.send(formatResponse('Logged in.'));
+
 	});
 
 	app.post('/api/logout', logOut);

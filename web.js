@@ -13,7 +13,7 @@ var express = require('express'),
 
 var mongoUri = process.env.MONGOLAB_URI || process.env.MONGOHQ_URL || 'mongodb://localhost/jobagrob';
 
-mongo.Db.connect(mongoUri, function (err, db) {
+mongoose.connect(mongoUri, function (err, db) {
     if(err) throw err;
     console.log('Successfully connected to Jobagrob MongoDB.');
 });
@@ -52,11 +52,16 @@ passport.use(new LocalStrategy({
 
     Account.findOne({email: username}, function (err, user) {
 
+        if (err) return done(err);
+
         if(!user) return done(null, false, { message: 'user with that email does not exist.' });
 
         user.comparePassword(password, function (err, isMatch) {
+
+            if (err) return done(err);
+
             // TODO error handling here necessary?
-            if(!isMatch) return done(null, false, { message: 'incorrect password.' });
+            if(!isMatch) return done(new handler.InvalidArgumentError('INCORRECT PASSWORD.'));
             // correct credentials
             return done(null, user);
         });
