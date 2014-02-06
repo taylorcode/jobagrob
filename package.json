@@ -27,7 +27,8 @@
     "mongoose-schema-extend": "~0.1.7",
     "restify-errors": "~2.6.1",
     "bcrypt": "~0.7.7",
-    "underscore": "~1.5.2"
+    "underscore": "~1.5.2",
+    "passport-local": "~0.1.6"
   },
   "devDependencies": {
     "grunt": "~0.4.2",

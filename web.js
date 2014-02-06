@@ -13,7 +13,7 @@ var express = require('express'),
 
 var mongoUri = process.env.MONGOLAB_URI || process.env.MONGOHQ_URL || 'mongodb://localhost/jobagrob';
 
-mongo.Db.connect(mongoUri, function (err, db) {
+mongoose.connect(mongoUri, function (err, db) {
     if(err) throw err;
     console.log('Successfully connected to Jobagrob MongoDB.');
 });
