@@ -1,9 +1,9 @@
 var express = require('express'),
     app = express(),
     logfmt = require('logfmt'),
-    port,
+    port;/*,
     mongoose = require('mongoose'),
-    handler = require('restify-errors');
+    handler = require('restify-errors');*/
     /*Account = require('./server/schemas/account-model'),
     passport = require('passport'),
     LocalStrategy = require('passport-local').Strategy,
@@ -11,11 +11,11 @@ var express = require('express'),
 
 
 */
-
+/*
 mongoose.connect('mongodb://localhost/jobagrob', function (err) {
     if(err) throw err;
     console.log('Successfully connected to Jobagrob MongoDB.');
-});
+});*/
 
 app.configure(function () {
 
