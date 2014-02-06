@@ -1,7 +1,9 @@
 var express = require('express'),
     app = express(),
     logfmt = require('logfmt'),
-    port;/*,
+    port,
+    mongo = require('mongodb');
+    /*,
     mongoose = require('mongoose'),
     handler = require('restify-errors');*/
     /*Account = require('./server/schemas/account-model'),
@@ -16,6 +18,15 @@ mongoose.connect('mongodb://localhost/jobagrob', function (err) {
     if(err) throw err;
     console.log('Successfully connected to Jobagrob MongoDB.');
 });*/
+
+
+var mongoUri = process.env.MONGOLAB_URI || process.env.MONGOHQ_URL || 'mongodb://localhost/jobagrob';
+
+mongo.Db.connect(mongoUri, function (err, db) {
+    if(err) throw err;
+    console.log('Successfully connected to Jobagrob MongoDB.');
+});
+
 
 app.configure(function () {
 
