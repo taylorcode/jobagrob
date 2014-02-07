@@ -16,20 +16,20 @@
 	</nav>
 </header>
 
-<h2>Welcome back, Taylor. <span>Your job progress:</span></h2>
+<!-- <h2>Welcome back, Human. <span>Your job progress:</span></h2> -->
 
 <section id="active-jobs" class="mobile-reset">
 	<ul class="job-status" ng-init="">
 		<h3>Incomplete Job Applications</h3>
 		<li ng-repeat="j in jobs">
-			<div>
-				<div class="button-left-wrapper">
+			<section>
+				<div class="company-logo -size-medium"></div>
+				<h4>{{j.title}}</h4>
+				<span>{{j.company}}</span>
+				<div class="button-left-wrapper mobile-reset">
 					<button class="button">Continue</button>
 				</div>
-				<div class="company-logo -size-medium"></div>
-				<h3>{{j.title}}</h3>
-				<span class="mobile-block">{{j.company}}</span>
-			</div>
+			</section>
 			<div class="job-extra">
 				<span>{{j.location}}</span>
 			</div>

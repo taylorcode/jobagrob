@@ -1,16 +1,22 @@
 #navigation-bar
 	margin-top: 15px
 	border-bottom: 2px solid #B8B8B8
+	&:before
+		content: ''
+		height: 100%
+		display: inline-block
+	.home-logo
+		padding: 15px 15px 0px 0px
+		float: left
+		text-indent: -9999px
+		background: url(../media/logos/jobagrob-logo.svg) center center no-repeat
+		margin-top: 5px
+		width: 170px
+		height: 40px
 	nav a
 		padding: 12px 20px
 		display: inline-block
-		.home-logo
-			float: left
-			width: 140px
-			margin-right: 15px
-			height: 40px
-			text-indent: -9999px
-			background: url(assets/media/logos/jobagrob-logo.svg)
+		vertical-align: bottom
 
 
 #job-navigation-panel
@@ -31,45 +37,62 @@
 	width: 640px
 	float: left
 
+	$spacing: 15px
+
 	.job-status
-		padding: 25px
 		span
-			color: $light-gray
+			color: $accent-gray
+		h3
+			margin: 40px 0px 20px 0px
 		li
-			> div
-				padding: 0px 20px
+			border: 1px solid $light-accent-gray
+			margin-bottom: 25px
+			section
 				background: white
-				position: relative
+				display: table
+				width: 100%
+				text-align: right
+				span, h4
+					text-align: left
+				span
+					display: block
 
 			.button-left-wrapper
-				height: 100%
-				position: absolute
-				right: 20px
+				display: table-cell
+				padding-right: $spacing
 				.button 
 					display: inline-block
 					vertical-align: middle
+					padding: 10px 12px
+
+					@media screen and ($width-name : $mobile-width)
+						width: 100%
 				&:before
 					content: ''
 					display: inline-block
 					height: 100%
 					vertical-align: middle
-			h3
-				margin-top: 15px
-		//.progress-bar
-		//	background: $light-gray
-		//	span
-		//		background: $dark-green
+
+				@media screen and ($width-name : $mobile-width)
+					&:before
+						content: none
+					padding: $spacing
+
+			h4
+				margin-top: $spacing
 		.job-extra
-			background: $accent-gray
+			background: $light-gray
+			padding: $spacing
 
 	.company-logo
+		border: 1px solid $light-gray
 		float: left
+		margin: $spacing
 		&.-size-medium
-			margin-right: 20px
-			width: 70px
-			height: 70px
+			margin-right: $spacing
+			width: 50px
+			height: 50px
 		&.-size-small
-			margin-right: 10px
 			width: 30px
 			height: 30px
 

@@ -2,6 +2,9 @@
 @import "compass/css3"
 @import "variables"
 
+// THERE ARE SO MANY DIFFERENT FONT WEIGHTS  -- use them ====>  http://www.google.com/fonts#UsePlace:use
+@import url(http://fonts.googleapis.com/css?family=Bitter|Open+Sans)
+
 /* for dev purposes */
 *
 	//@include box-shadow(#aaa 0 0 0 1px inset)
@@ -35,10 +38,11 @@ body
 	h1, h2, h3, h4, h5, span, em, strong, b, u, label, form, input
 		overflow: visible
 	border-top: 5px solid $light-green
+	@include font-open-sans
 
 
-#wrapper
-	width: 960px
+[ng-view]
+	width: 1080px
 	max-width: 100%
 	margin: 0 auto
 	overflow: hidden
@@ -65,10 +69,6 @@ h1, h3
 
 /** reuseable (app-scope) classes **/
 
-/* wrappers */
-.mid-wrapper
-	text-align: center
-	position: relative
 
 /* buttons */
 .button
@@ -105,7 +105,6 @@ h1, h3
 			//border-bottom: 1px solid #eee
 			border: 1px solid $light-accent-gray
 			font-size: 16px
-			@include font-open-sans
 			margin: 0
 			&:focus
 				background: #fdfdfd
@@ -142,6 +141,6 @@ $mobile-width: 450px
 		display: block !important
 		width: auto !important
 		float: none !important
-		clear: none !important
+		clear: both !important
 
 @import "../views/**/*.sass"

@@ -1,3 +1,4 @@
+@import url(http://fonts.googleapis.com/css?family=Bitter|Open+Sans);
 /* line 17, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -66,7 +67,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /* for dev purposes */
 /* custom mixins */
 /* additional resets */
-/* line 19, ../../../dev/assets/stylesheets/styles.sass */
+/* line 22, ../../../dev/assets/stylesheets/styles.sass */
 html, body {
   margin: 0;
   padding: 0;
@@ -74,78 +75,72 @@ html, body {
   min-width: 640px;
 }
 
-/* line 25, ../../../dev/assets/stylesheets/styles.sass */
+/* line 28, ../../../dev/assets/stylesheets/styles.sass */
 input:focus, select:focus, textarea:focus, button:focus, a:focus {
   outline: none;
 }
 
 /* frame */
-/* line 29, ../../../dev/assets/stylesheets/styles.sass */
+/* line 32, ../../../dev/assets/stylesheets/styles.sass */
 body {
   background: #e6e6e6;
   zoom: 1;
   font-family: sans-serif;
   border-top: 5px solid #37ab4a;
+  font-family: "Open Sans", sans-serif;
 }
-/* line 33, ../../../dev/assets/stylesheets/styles.sass */
+/* line 36, ../../../dev/assets/stylesheets/styles.sass */
 body * {
   overflow: hidden;
 }
-/* line 35, ../../../dev/assets/stylesheets/styles.sass */
+/* line 38, ../../../dev/assets/stylesheets/styles.sass */
 body h1, body h2, body h3, body h4, body h5, body span, body em, body strong, body b, body u, body label, body form, body input {
   overflow: visible;
 }
 
-/* line 40, ../../../dev/assets/stylesheets/styles.sass */
-#wrapper {
-  width: 960px;
+/* line 44, ../../../dev/assets/stylesheets/styles.sass */
+[ng-view] {
+  width: 1080px;
   max-width: 100%;
   margin: 0 auto;
   overflow: hidden;
 }
 
 /* global styles */
-/* line 47, ../../../dev/assets/stylesheets/styles.sass */
+/* line 51, ../../../dev/assets/stylesheets/styles.sass */
 h1 {
   font-size: 35px;
   color: #37ab4a;
 }
 
-/* line 51, ../../../dev/assets/stylesheets/styles.sass */
+/* line 55, ../../../dev/assets/stylesheets/styles.sass */
 h2 {
   font-size: 24px;
 }
 
-/* line 54, ../../../dev/assets/stylesheets/styles.sass */
+/* line 58, ../../../dev/assets/stylesheets/styles.sass */
 h3 {
   font-size: 22px;
   color: #5a5a5a;
 }
 
-/* line 57, ../../../dev/assets/stylesheets/styles.sass */
+/* line 61, ../../../dev/assets/stylesheets/styles.sass */
 h4 {
   font-size: 18px;
 }
 
-/* line 60, ../../../dev/assets/stylesheets/styles.sass */
+/* line 64, ../../../dev/assets/stylesheets/styles.sass */
 h5 {
   font-size: 16px;
 }
 
-/* line 63, ../../../dev/assets/stylesheets/styles.sass */
+/* line 67, ../../../dev/assets/stylesheets/styles.sass */
 h1, h3 {
   font-family: "Bitter", serif;
   font-weight: 400;
 }
 
 /*reuseable (app-scope) classes */
-/* wrappers */
-/* line 69, ../../../dev/assets/stylesheets/styles.sass */
-.mid-wrapper {
-  text-align: center;
-  position: relative;
-}
-
 /* buttons */
 /* line 74, ../../../dev/assets/stylesheets/styles.sass */
 .button {
@@ -190,19 +185,18 @@ h1, h3 {
   background: #f1f1f1;
   border: 1px solid #d3d1d1;
   font-size: 16px;
-  font-family: "Open Sans", sans-serif;
   margin: 0;
 }
-/* line 110, ../../../dev/assets/stylesheets/styles.sass */
+/* line 109, ../../../dev/assets/stylesheets/styles.sass */
 .stacked-inputs input:not([type=submit]):focus {
   background: #fdfdfd;
 }
-/* line 113, ../../../dev/assets/stylesheets/styles.sass */
+/* line 112, ../../../dev/assets/stylesheets/styles.sass */
 .stacked-inputs label {
   display: block;
   padding-bottom: 8px;
 }
-/* line 117, ../../../dev/assets/stylesheets/styles.sass */
+/* line 116, ../../../dev/assets/stylesheets/styles.sass */
 .stacked-inputs .split-inputs-wrapper {
   -webkit-column-count: 2;
   -moz-column-count: 2;
@@ -220,33 +214,33 @@ h1, h3 {
 /* subject to change - use device queries */
 /* media queries */
 @media screen and (max-width: 450px) {
-  /* line 128, ../../../dev/assets/stylesheets/styles.sass */
+  /* line 127, ../../../dev/assets/stylesheets/styles.sass */
   h1 {
     font-size: 28px;
   }
 
-  /* line 131, ../../../dev/assets/stylesheets/styles.sass */
+  /* line 130, ../../../dev/assets/stylesheets/styles.sass */
   h2 {
     font-size: 22px;
   }
 
-  /* line 134, ../../../dev/assets/stylesheets/styles.sass */
+  /* line 133, ../../../dev/assets/stylesheets/styles.sass */
   h3 {
     font-size: 20px;
   }
 
-  /* line 137, ../../../dev/assets/stylesheets/styles.sass */
+  /* line 136, ../../../dev/assets/stylesheets/styles.sass */
   html, body {
     width: auto;
     min-width: 0;
   }
 
-  /* line 141, ../../../dev/assets/stylesheets/styles.sass */
+  /* line 140, ../../../dev/assets/stylesheets/styles.sass */
   .mobile-reset {
     display: block !important;
     width: auto !important;
     float: none !important;
-    clear: none !important;
+    clear: both !important;
   }
 }
 /* line 1, ../../../dev/assets/views/credentials/stylesheets/_credentials.sass */
@@ -399,98 +393,138 @@ h1, h3 {
   border-bottom: 2px solid #b8b8b8;
 }
 /* line 4, ../../../dev/assets/views/main/stylesheets/_main.sass */
+#navigation-bar:before {
+  content: "";
+  height: 100%;
+  display: inline-block;
+}
+/* line 8, ../../../dev/assets/views/main/stylesheets/_main.sass */
+#navigation-bar .home-logo {
+  padding: 15px 15px 0px 0px;
+  float: left;
+  text-indent: -9999px;
+  background: url(../media/logos/jobagrob-logo.svg) center center no-repeat;
+  margin-top: 5px;
+  width: 170px;
+  height: 40px;
+}
+/* line 16, ../../../dev/assets/views/main/stylesheets/_main.sass */
 #navigation-bar nav a {
   padding: 12px 20px;
   display: inline-block;
-}
-/* line 7, ../../../dev/assets/views/main/stylesheets/_main.sass */
-#navigation-bar nav a .home-logo {
-  float: left;
-  width: 140px;
-  margin-right: 15px;
-  height: 40px;
-  text-indent: -9999px;
-  background: url(assets/media/logos/jobagrob-logo.svg);
+  vertical-align: bottom;
 }
 
-/* line 16, ../../../dev/assets/views/main/stylesheets/_main.sass */
+/* line 22, ../../../dev/assets/views/main/stylesheets/_main.sass */
 #job-navigation-panel {
   float: right;
   width: 300px;
   height: 100%;
 }
-/* line 22, ../../../dev/assets/views/main/stylesheets/_main.sass */
+/* line 28, ../../../dev/assets/views/main/stylesheets/_main.sass */
 #job-navigation-panel .job-suggestions li {
   margin: 10px 0px;
 }
-/* line 24, ../../../dev/assets/views/main/stylesheets/_main.sass */
+/* line 30, ../../../dev/assets/views/main/stylesheets/_main.sass */
 #job-navigation-panel .job-suggestions a {
   float: right;
 }
-/* line 26, ../../../dev/assets/views/main/stylesheets/_main.sass */
+/* line 32, ../../../dev/assets/views/main/stylesheets/_main.sass */
 #job-navigation-panel .job-suggestions span {
   color: #f1f1f1;
 }
 
 /* specific to main */
-/* line 30, ../../../dev/assets/views/main/stylesheets/_main.sass */
+/* line 36, ../../../dev/assets/views/main/stylesheets/_main.sass */
 #active-jobs {
   width: 640px;
   float: left;
 }
-/* line 34, ../../../dev/assets/views/main/stylesheets/_main.sass */
-#active-jobs .job-status {
-  padding: 25px;
-}
-/* line 36, ../../../dev/assets/views/main/stylesheets/_main.sass */
+/* line 43, ../../../dev/assets/views/main/stylesheets/_main.sass */
 #active-jobs .job-status span {
-  color: #f1f1f1;
+  color: #bfbfbf;
 }
-/* line 39, ../../../dev/assets/views/main/stylesheets/_main.sass */
-#active-jobs .job-status li > div {
-  padding: 0px 20px;
+/* line 45, ../../../dev/assets/views/main/stylesheets/_main.sass */
+#active-jobs .job-status h3 {
+  margin: 40px 0px 20px 0px;
+}
+/* line 47, ../../../dev/assets/views/main/stylesheets/_main.sass */
+#active-jobs .job-status li {
+  border: 1px solid #d3d1d1;
+  margin-bottom: 25px;
+}
+/* line 50, ../../../dev/assets/views/main/stylesheets/_main.sass */
+#active-jobs .job-status li section {
   background: white;
-  position: relative;
+  display: table;
+  width: 100%;
+  text-align: right;
 }
-/* line 44, ../../../dev/assets/views/main/stylesheets/_main.sass */
+/* line 55, ../../../dev/assets/views/main/stylesheets/_main.sass */
+#active-jobs .job-status li section span, #active-jobs .job-status li section h4 {
+  text-align: left;
+}
+/* line 57, ../../../dev/assets/views/main/stylesheets/_main.sass */
+#active-jobs .job-status li section span {
+  display: block;
+}
+/* line 60, ../../../dev/assets/views/main/stylesheets/_main.sass */
 #active-jobs .job-status li .button-left-wrapper {
-  height: 100%;
-  position: absolute;
-  right: 20px;
+  display: table-cell;
+  padding-right: 15px;
 }
-/* line 48, ../../../dev/assets/views/main/stylesheets/_main.sass */
+/* line 63, ../../../dev/assets/views/main/stylesheets/_main.sass */
 #active-jobs .job-status li .button-left-wrapper .button {
   display: inline-block;
   vertical-align: middle;
+  padding: 10px 12px;
 }
-/* line 51, ../../../dev/assets/views/main/stylesheets/_main.sass */
+@media screen and (max-width: 450px) {
+  /* line 63, ../../../dev/assets/views/main/stylesheets/_main.sass */
+  #active-jobs .job-status li .button-left-wrapper .button {
+    width: 100%;
+  }
+}
+/* line 70, ../../../dev/assets/views/main/stylesheets/_main.sass */
 #active-jobs .job-status li .button-left-wrapper:before {
   content: "";
   display: inline-block;
   height: 100%;
   vertical-align: middle;
 }
-/* line 56, ../../../dev/assets/views/main/stylesheets/_main.sass */
-#active-jobs .job-status li h3 {
+@media screen and (max-width: 450px) {
+  /* line 60, ../../../dev/assets/views/main/stylesheets/_main.sass */
+  #active-jobs .job-status li .button-left-wrapper {
+    padding: 15px;
+  }
+  /* line 77, ../../../dev/assets/views/main/stylesheets/_main.sass */
+  #active-jobs .job-status li .button-left-wrapper:before {
+    content: none;
+  }
+}
+/* line 81, ../../../dev/assets/views/main/stylesheets/_main.sass */
+#active-jobs .job-status li h4 {
   margin-top: 15px;
 }
-/* line 62, ../../../dev/assets/views/main/stylesheets/_main.sass */
+/* line 83, ../../../dev/assets/views/main/stylesheets/_main.sass */
 #active-jobs .job-status .job-extra {
-  background: #bfbfbf;
+  background: #f1f1f1;
+  padding: 15px;
 }
-/* line 65, ../../../dev/assets/views/main/stylesheets/_main.sass */
+/* line 87, ../../../dev/assets/views/main/stylesheets/_main.sass */
 #active-jobs .company-logo {
+  border: 1px solid #f1f1f1;
   float: left;
+  margin: 15px;
 }
-/* line 67, ../../../dev/assets/views/main/stylesheets/_main.sass */
+/* line 91, ../../../dev/assets/views/main/stylesheets/_main.sass */
 #active-jobs .company-logo.-size-medium {
-  margin-right: 20px;
-  width: 70px;
-  height: 70px;
+  margin-right: 15px;
+  width: 50px;
+  height: 50px;
 }
-/* line 71, ../../../dev/assets/views/main/stylesheets/_main.sass */
+/* line 95, ../../../dev/assets/views/main/stylesheets/_main.sass */
 #active-jobs .company-logo.-size-small {
-  margin-right: 10px;
   width: 30px;
   height: 30px;
 }
