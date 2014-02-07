@@ -22,18 +22,14 @@ mongoose.connect(mongoUri, function (err, db) {
 app.configure(function () {
 
   app.use(express.static('target'));
-
   app.use(express.cookieParser());
-
   app.use(express.bodyParser());
-
   app.use(express.session({ secret: 'keyboard cat' }));
   app.use(passport.initialize());
   app.use(passport.session());
   app.use(app.router);
   app.use(clientErrorHandler);
   routes.setup(app);
-
   app.use(logfmt.requestLogger());
 
 });
@@ -41,7 +37,9 @@ app.configure(function () {
 function clientErrorHandler(err, req, res, next) {
   if(err.statusCode) return res.send(err.statusCode, err);
   if(err.name === 'ValidationError') return res.send(400, err);
-  res.send(new handler.InternalError('something went wrong'));
+
+  // TODO catch any other errors that we might want to format.
+  res.send(new handler.InternalError('Something went wrong.'));
 }
 
 passport.use(new LocalStrategy({

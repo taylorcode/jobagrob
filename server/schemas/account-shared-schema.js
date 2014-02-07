@@ -1,3 +1,5 @@
+/***** DEPRECATED *******/
+
 var ObjectID = require('mongodb').ObjectID,
     mongoose = require('mongoose'),
     Schema = mongoose.Schema,

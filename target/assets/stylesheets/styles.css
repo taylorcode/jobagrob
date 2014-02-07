@@ -393,18 +393,17 @@ h1, h3 {
   line-height: 25px;
 }
 
-/* move this to _ base file */
-/* line 2, ../../../dev/assets/views/main/stylesheets/_main.sass */
+/* line 1, ../../../dev/assets/views/main/stylesheets/_main.sass */
 #navigation-bar {
   margin-top: 15px;
   border-bottom: 2px solid #b8b8b8;
 }
-/* line 5, ../../../dev/assets/views/main/stylesheets/_main.sass */
+/* line 4, ../../../dev/assets/views/main/stylesheets/_main.sass */
 #navigation-bar nav a {
   padding: 12px 20px;
   display: inline-block;
 }
-/* line 8, ../../../dev/assets/views/main/stylesheets/_main.sass */
+/* line 7, ../../../dev/assets/views/main/stylesheets/_main.sass */
 #navigation-bar nav a .home-logo {
   float: left;
   width: 140px;
@@ -414,63 +413,84 @@ h1, h3 {
   background: url(assets/media/logos/jobagrob-logo.svg);
 }
 
-/* line 17, ../../../dev/assets/views/main/stylesheets/_main.sass */
+/* line 16, ../../../dev/assets/views/main/stylesheets/_main.sass */
 #job-navigation-panel {
   float: right;
   width: 300px;
   height: 100%;
 }
+/* line 22, ../../../dev/assets/views/main/stylesheets/_main.sass */
+#job-navigation-panel .job-suggestions li {
+  margin: 10px 0px;
+}
+/* line 24, ../../../dev/assets/views/main/stylesheets/_main.sass */
+#job-navigation-panel .job-suggestions a {
+  float: right;
+}
+/* line 26, ../../../dev/assets/views/main/stylesheets/_main.sass */
+#job-navigation-panel .job-suggestions span {
+  color: #f1f1f1;
+}
 
 /* specific to main */
-/* line 23, ../../../dev/assets/views/main/stylesheets/_main.sass */
+/* line 30, ../../../dev/assets/views/main/stylesheets/_main.sass */
 #active-jobs {
   width: 640px;
   float: left;
 }
-
-/* line 27, ../../../dev/assets/views/main/stylesheets/_main.sass */
-.job-status {
+/* line 34, ../../../dev/assets/views/main/stylesheets/_main.sass */
+#active-jobs .job-status {
   padding: 25px;
 }
-/* line 29, ../../../dev/assets/views/main/stylesheets/_main.sass */
-.job-status span {
+/* line 36, ../../../dev/assets/views/main/stylesheets/_main.sass */
+#active-jobs .job-status span {
   color: #f1f1f1;
 }
-/* line 31, ../../../dev/assets/views/main/stylesheets/_main.sass */
-.job-status .button {
-  float: right;
+/* line 39, ../../../dev/assets/views/main/stylesheets/_main.sass */
+#active-jobs .job-status li > div {
+  padding: 0px 20px;
+  background: white;
+  position: relative;
 }
-/* line 33, ../../../dev/assets/views/main/stylesheets/_main.sass */
-.job-status li h3 {
+/* line 44, ../../../dev/assets/views/main/stylesheets/_main.sass */
+#active-jobs .job-status li .button-left-wrapper {
+  height: 100%;
+  position: absolute;
+  right: 20px;
+}
+/* line 48, ../../../dev/assets/views/main/stylesheets/_main.sass */
+#active-jobs .job-status li .button-left-wrapper .button {
+  display: inline-block;
+  vertical-align: middle;
+}
+/* line 51, ../../../dev/assets/views/main/stylesheets/_main.sass */
+#active-jobs .job-status li .button-left-wrapper:before {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+/* line 56, ../../../dev/assets/views/main/stylesheets/_main.sass */
+#active-jobs .job-status li h3 {
   margin-top: 15px;
 }
-
-/* line 36, ../../../dev/assets/views/main/stylesheets/_main.sass */
-.company-logo {
+/* line 62, ../../../dev/assets/views/main/stylesheets/_main.sass */
+#active-jobs .job-status .job-extra {
+  background: #bfbfbf;
+}
+/* line 65, ../../../dev/assets/views/main/stylesheets/_main.sass */
+#active-jobs .company-logo {
   float: left;
 }
-/* line 38, ../../../dev/assets/views/main/stylesheets/_main.sass */
-.company-logo.-size-medium {
+/* line 67, ../../../dev/assets/views/main/stylesheets/_main.sass */
+#active-jobs .company-logo.-size-medium {
   margin-right: 20px;
   width: 70px;
   height: 70px;
 }
-/* line 42, ../../../dev/assets/views/main/stylesheets/_main.sass */
-.company-logo.-size-small {
+/* line 71, ../../../dev/assets/views/main/stylesheets/_main.sass */
+#active-jobs .company-logo.-size-small {
   margin-right: 10px;
   width: 30px;
   height: 30px;
-}
-
-/* line 48, ../../../dev/assets/views/main/stylesheets/_main.sass */
-.job-suggestions li {
-  margin: 10px 0px;
-}
-/* line 50, ../../../dev/assets/views/main/stylesheets/_main.sass */
-.job-suggestions a {
-  float: right;
-}
-/* line 52, ../../../dev/assets/views/main/stylesheets/_main.sass */
-.job-suggestions span {
-  color: #f1f1f1;
 }
