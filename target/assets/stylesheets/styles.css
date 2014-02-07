@@ -177,8 +177,13 @@ h1, h3 {
   color: #2f8943;
 }
 
+/* line 93, ../../../dev/assets/stylesheets/styles.sass */
+.mid-wrapper {
+  text-align: center;
+}
+
 /* inputs */
-/* line 95, ../../../dev/assets/stylesheets/styles.sass */
+/* line 98, ../../../dev/assets/stylesheets/styles.sass */
 .stacked-inputs input {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -187,23 +192,23 @@ h1, h3 {
   width: 100%;
   border-radius: 3px;
 }
-/* line 100, ../../../dev/assets/stylesheets/styles.sass */
+/* line 103, ../../../dev/assets/stylesheets/styles.sass */
 .stacked-inputs input:not([type=submit]) {
   background: #f1f1f1;
   border: 1px solid #d3d1d1;
   font-size: 16px;
   margin: 0;
 }
-/* line 109, ../../../dev/assets/stylesheets/styles.sass */
+/* line 112, ../../../dev/assets/stylesheets/styles.sass */
 .stacked-inputs input:not([type=submit]):focus {
   background: #fdfdfd;
 }
-/* line 112, ../../../dev/assets/stylesheets/styles.sass */
+/* line 115, ../../../dev/assets/stylesheets/styles.sass */
 .stacked-inputs label {
   display: block;
   padding-bottom: 8px;
 }
-/* line 116, ../../../dev/assets/stylesheets/styles.sass */
+/* line 119, ../../../dev/assets/stylesheets/styles.sass */
 .stacked-inputs .split-inputs-wrapper {
   -webkit-column-count: 2;
   -moz-column-count: 2;
@@ -221,28 +226,28 @@ h1, h3 {
 /* subject to change - use device queries */
 /* media queries */
 @media screen and (max-width: 450px) {
-  /* line 127, ../../../dev/assets/stylesheets/styles.sass */
+  /* line 130, ../../../dev/assets/stylesheets/styles.sass */
   h1 {
     font-size: 28px;
   }
 
-  /* line 130, ../../../dev/assets/stylesheets/styles.sass */
+  /* line 133, ../../../dev/assets/stylesheets/styles.sass */
   h2 {
     font-size: 22px;
   }
 
-  /* line 133, ../../../dev/assets/stylesheets/styles.sass */
+  /* line 136, ../../../dev/assets/stylesheets/styles.sass */
   h3 {
     font-size: 20px;
   }
 
-  /* line 136, ../../../dev/assets/stylesheets/styles.sass */
+  /* line 139, ../../../dev/assets/stylesheets/styles.sass */
   html, body {
     width: auto;
     min-width: 0;
   }
 
-  /* line 140, ../../../dev/assets/stylesheets/styles.sass */
+  /* line 143, ../../../dev/assets/stylesheets/styles.sass */
   .mobile-reset {
     display: block !important;
     width: auto !important;
@@ -253,7 +258,7 @@ h1, h3 {
 /* line 1, ../../../dev/assets/views/credentials/stylesheets/_credentials.sass */
 #intro-text {
   display: inline-block;
-  margin-top: 140px;
+  margin: 60px 15px 15px 15px;
 }
 /* line 4, ../../../dev/assets/views/credentials/stylesheets/_credentials.sass */
 #intro-text h1 {
@@ -313,78 +318,6 @@ h1, h3 {
   color: #bfbfbf;
 }
 /* line 47, ../../../dev/assets/views/credentials/stylesheets/_credentials.sass */
-#credentials-region .other-option {
-  color: #37ab4a;
-  font-size: 18px;
-  font-family: "Bitter", serif;
-  font-weight: 400;
-  margin-top: 10px;
-  line-height: 25px;
-}
-
-/* line 1, ../../../dev/assets/views/credentials/stylesheets/_login.sass */
-#intro-text {
-  display: inline-block;
-  margin-top: 140px;
-}
-/* line 4, ../../../dev/assets/views/credentials/stylesheets/_login.sass */
-#intro-text h1 {
-  font-size: 45px;
-  line-height: 50px;
-  font-weight: 700;
-  margin-bottom: 10px;
-}
-/* line 9, ../../../dev/assets/views/credentials/stylesheets/_login.sass */
-#intro-text h3 {
-  font-size: 20px;
-  line-height: 25px;
-  margin: 20px 0;
-}
-
-/* line 15, ../../../dev/assets/views/credentials/stylesheets/_login.sass */
-#credentials-region #sign-up, #credentials-region #log-in {
-  background-color: white;
-  border-radius: 3px;
-  border: 1px solid #bfbfbf;
-  display: inline-block;
-  width: 300px;
-}
-/* line 21, ../../../dev/assets/views/credentials/stylesheets/_login.sass */
-#credentials-region #sign-up form, #credentials-region #log-in form {
-  padding: 15px;
-  background: white;
-}
-/* line 26, ../../../dev/assets/views/credentials/stylesheets/_login.sass */
-#credentials-region #sign-up nav a {
-  cursor: pointer;
-  color: #bfbfbf;
-  display: block;
-  float: left;
-  font-size: 20px;
-  padding: 15px 0;
-  font-family: "Bitter", serif;
-  font-weight: 400;
-  width: 50%;
-}
-/* line 35, ../../../dev/assets/views/credentials/stylesheets/_login.sass */
-#credentials-region #sign-up nav a.selected {
-  color: #37ab4a;
-}
-/* line 37, ../../../dev/assets/views/credentials/stylesheets/_login.sass */
-#credentials-region #sign-up form {
-  border-top: 1px solid #bfbfbf;
-}
-/* line 40, ../../../dev/assets/views/credentials/stylesheets/_login.sass */
-#credentials-region #sign-up .form-top-helper {
-  border-bottom: 1px solid #bfbfbf;
-  font-family: "Bitter", serif;
-  font-weight: 400;
-  padding: 20px 0 13px 0;
-  margin: 0 17px;
-  font-size: 19px;
-  color: #bfbfbf;
-}
-/* line 47, ../../../dev/assets/views/credentials/stylesheets/_login.sass */
 #credentials-region .other-option {
   color: #37ab4a;
   font-size: 18px;
