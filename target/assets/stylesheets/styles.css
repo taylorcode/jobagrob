@@ -65,6 +65,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 /* for dev purposes */
+/* line 9, ../../../dev/assets/stylesheets/styles.sass */
+* {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
 /* custom mixins */
 /* additional resets */
 /* line 22, ../../../dev/assets/stylesheets/styles.sass */
