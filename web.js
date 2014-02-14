@@ -1,7 +1,6 @@
 var express = require('express'),
     app = express(),
     logfmt = require('logfmt'),
-    port,
     mongo = require('mongodb');
     mongoose = require('mongoose'),
     passport = require('passport'),
@@ -9,7 +8,8 @@ var express = require('express'),
     Account = require('./server/schemas/account-model'),
     passport = require('passport'),
     LocalStrategy = require('passport-local').Strategy,
-    routes = require('./server/routes');
+    routes = require('./server/routes'),
+    fs = require('fs');
 
 var mongoUri = process.env.MONGOLAB_URI || process.env.MONGOHQ_URL || 'mongodb://localhost/jobagrob';
 
@@ -21,6 +21,7 @@ mongoose.connect(mongoUri, function (err, db) {
 
 app.configure(function () {
 
+  app.set('port', Number(process.env.PORT) || 5000);
   app.use(express.static('target'));
   app.use(express.cookieParser());
   app.use(express.bodyParser());
@@ -33,6 +34,23 @@ app.configure(function () {
   app.use(logfmt.requestLogger());
 
 });
+
+
+
+app.post('/upload', function(req, res) {
+    var image =  req.files.image;
+    var newImageLocation = 'public/images/' + image.name;//path.join(__dirname, 'public/images', image.name);
+    
+    fs.readFile(image.path, function(err, data) {
+        fs.writeFile(newImageLocation, data, function(err) {
+            res.json(200, { 
+                src: 'images/' + image.name,
+                size: image.size
+            });
+        });
+    });
+});
+
 
 function clientErrorHandler(err, req, res, next) {
   if(err.statusCode) return res.send(err.statusCode, err);
@@ -82,8 +100,7 @@ app.use(function(req, res) {
     res.sendfile('target/index.html');
 });
 
-var port = Number(process.env.PORT || 5000);
 
-app.listen(port, function() {
-  console.log('Listening on ' + port);
+app.listen(app.get('port'), function() {
+  console.log('Listening on ' + app.get('port'));
 });

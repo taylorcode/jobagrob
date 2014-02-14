@@ -9,6 +9,7 @@ SchemaString.prototype.minLength = function (minLength, message) {
   var msg = message || 'Minimum length not met.';
 
   function testMinLength (v) {
+    if(!v) return false;
   	return v.length >= minLength
   }
 
@@ -22,6 +23,7 @@ SchemaString.prototype.maxLength = function (maxLength, message) {
   var msg = message || 'Maximum length exceeded.';
 
   function testMaxLength (v) {
+    if(!v) return false;
   	return v.length <= maxLength
   }
 

@@ -15,6 +15,9 @@
     }).when('/jobs/new', {
       templateUrl: 'assets/views/job/partials/job.html',
       controller: 'Job'
+    }).when('/jobs/:id', {
+      templateUrl: 'assets/views/job/partials/view-job.html',
+      controller: 'ViewJob'
     }).when('/jobs/:id/edit', {
       templateUrl: 'assets/views/job/partials/job.html',
       controller: 'EditJob'

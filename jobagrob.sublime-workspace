@@ -56,66 +56,51 @@
 	"buffers":
 	[
 		{
-			"file": "target/assets/scripts/routes.js",
-			"settings":
-			{
-				"buffer_size": 967,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Gruntfile.js",
-			"settings":
-			{
-				"buffer_size": 3728,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "web.js",
-			"settings":
-			{
-				"buffer_size": 2779,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/taylormcintyre/Documents/projects/jobagrob-old/server/routes.js",
-			"settings":
-			{
-				"buffer_size": 4262,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/taylormcintyre/Documents/projects/jobagrob-old/server/schemas/account-model.js",
-			"settings":
-			{
-				"buffer_size": 2485,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/taylormcintyre/Documents/projects/jobagrob-old/server.js",
-			"settings":
-			{
-				"buffer_size": 1955,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "config.rb",
-			"settings":
-			{
-				"buffer_size": 23,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "dev/assets/scripts/routes.coffee",
 			"settings":
 			{
-				"buffer_size": 830,
+				"buffer_size": 1067,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "dev/assets/views/job/partials/job.html",
+			"settings":
+			{
+				"buffer_size": 1080,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "dev/assets/views/job/partials/view-job.html",
+			"settings":
+			{
+				"buffer_size": 96,
+				"line_ending": "Unix",
+				"name": "{{job.title}}"
+			}
+		},
+		{
+			"file": "dev/assets/views/job/controllers/job.coffee",
+			"settings":
+			{
+				"buffer_size": 580,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/taylormcintyre/Documents/projects/taylor-portfolio/dev/json/projects.json",
+			"settings":
+			{
+				"buffer_size": 11024,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "dev/assets/scripts/services.coffee",
+			"settings":
+			{
+				"buffer_size": 1328,
 				"line_ending": "Unix"
 			}
 		}
@@ -144,17 +129,49 @@
 	},
 	"file_history":
 	[
+		"/Users/taylormcintyre/Documents/projects/jobagrob/dev/assets/views/credentials/stylesheets/_credentials.sass",
+		"/Users/taylormcintyre/Documents/projects/jobagrob/dev/assets/views/credentials/partials/login.html",
+		"/Users/taylormcintyre/Documents/projects/jobagrob/dev/assets/stylesheets/_variables.sass",
+		"/Users/taylormcintyre/Documents/projects/jobagrob/dev/assets/stylesheets/styles.sass",
+		"/Users/taylormcintyre/Documents/projects/jobagrob/dev/assets/views/main/stylesheets/_main.sass",
+		"/Users/taylormcintyre/Documents/projects/jobagrob/dev/assets/views/main/partials/main.html",
+		"/Users/taylormcintyre/Documents/projects/jobagrob/dev/assets/views/main/controllers/main.coffee",
+		"/Users/taylormcintyre/Documents/projects/jobagrob/server/schemas/application-model.js",
+		"/Users/taylormcintyre/Documents/projects/jobagrob/server/schemas/job-model.js",
+		"/Users/taylormcintyre/Documents/projects/jobagrob/Gruntfile.js",
+		"/Users/taylormcintyre/Documents/projects/jobagrob/target/assets/views/main/partials/main.html",
+		"/Users/taylormcintyre/Documents/projects/jobagrob/dev/assets/views/credentials/controllers/credentials.coffee",
+		"/Users/taylormcintyre/Documents/projects/jobagrob/dev/assets/views/credentials/partials/signup.html",
+		"/Users/taylormcintyre/Documents/projects/jobagrob/dev/assets/scripts/services.coffee",
+		"/Users/taylormcintyre/Documents/projects/jobagrob/config.rb",
+		"/Users/taylormcintyre/Documents/projects/jobagrob/server/routes.js",
+		"/Users/taylormcintyre/Documents/projects/jobagrob/server/schemas/company-model.js",
+		"/Users/taylormcintyre/Documents/projects/jobagrob/web.js",
+		"/Users/taylormcintyre/Documents/projects/jobagrob/server/schemas/account-shared-schema.js",
+		"/Users/taylormcintyre/Documents/projects/jobagrob/server/schemas/account-model.js",
+		"/Users/taylormcintyre/Desktop/Gruntfile.js",
+		"/Users/taylormcintyre/Desktop/Gruntfile.coffee",
+		"/Users/taylormcintyre/Documents/projects/jobagrob-old/server.js",
+		"/Users/taylormcintyre/Documents/projects/jobagrob/package.json",
+		"/Users/taylormcintyre/Documents/projects/jobagrob-old/server/routes.js",
+		"/Users/taylormcintyre/Documents/projects/jobagrob-old/server/schemas/account-model.js",
+		"/Users/taylormcintyre/Documents/projects/taylor-portfolio/web.js",
+		"/Users/taylormcintyre/Documents/projects/jobagrob-old/public/index.html",
+		"/Users/taylormcintyre/Documents/projects/taylor-portfolio/dev/scripts/main.coffee",
+		"/Users/taylormcintyre/Documents/projects/jobagrob/dev/assets/scripts/routes.coffee",
+		"/Users/taylormcintyre/Documents/projects/jobagrob/dev/assets/views/credentials/partials/credentials.html",
+		"/Users/taylormcintyre/Documents/projects/jobagrob/dev/index.html",
+		"/Users/taylormcintyre/Documents/projects/jobagrob/target/assets/scripts/routes.js",
+		"/Users/taylormcintyre/Documents/projects/taylor-portfolio/dev/index.html",
+		"/Users/taylormcintyre/Documents/projects/jobagrob/server/plugins/validation-regexp.js",
+		"/Users/taylormcintyre/Documents/projects/jobagrob-old/server/plugins/validation-augments.js",
 		"/Users/taylormcintyre/Documents/projects/jobagrob-old/server/schemas/account-abstract-model.js",
 		"/Users/taylormcintyre/Documents/projects/jobagrob/README.md",
-		"/Users/taylormcintyre/Documents/projects/jobagrob/package.json",
-		"/Users/taylormcintyre/Documents/projects/jobagrob/dev/index.html",
 		"/Users/taylormcintyre/Documents/projects/jobagrob/target/index.html",
 		"/Users/taylormcintyre/Documents/projects/jobagrob/Procfile",
 		"/Users/taylormcintyre/Documents/projects/jobagrob/node_modules/grunt-sync/tasks/sync.js",
-		"/Users/taylormcintyre/Documents/projects/jobagrob/dev/assets/views/main/stylesheets/_main.sass",
 		"/Users/taylormcintyre/Documents/projects/jobagrob/target/assets/stylesheets/styles.css",
 		"/Users/taylormcintyre/Documents/projects/taylor-portfolio/dev/scripts/plugins/angular-scrollto.js",
-		"/Users/taylormcintyre/Documents/projects/taylor-portfolio/dev/index.html",
 		"/Users/taylormcintyre/Documents/projects/taylor-portfolio/dev/scripts/plugins/angular-anchor-scroll.js",
 		"/Users/taylormcintyre/Documents/projects/taylor-portfolio/dev/partials/posts/1.html",
 		"/Users/taylormcintyre/Documents/projects/taylor-portfolio/package.json",
@@ -163,7 +180,6 @@
 		"/Users/taylormcintyre/Documents/projects/taylor-portfolio/prod/app.min.css",
 		"/Users/taylormcintyre/Documents/projects/taylor-portfolio/prod/app.min.js",
 		"/Users/taylormcintyre/Documents/projects/taylor-portfolio/dev/scripts/main copy.js",
-		"/Users/taylormcintyre/Documents/projects/taylor-portfolio/web.js",
 		"/Users/taylormcintyre/Documents/projects/taylor-portfolio/config.rb",
 		"/Users/taylormcintyre/Documents/projects/taylor-portfolio/dev/templates/index.html",
 		"/Users/taylormcintyre/Documents/projects/taylor-portfolio/dev/index 2.html",
@@ -198,13 +214,8 @@
 		"/Users/taylormcintyre/Documents/projects/jobagrob/public/views/application/partials/application.html",
 		"/Users/taylormcintyre/Documents/projects/jobagrob/public/views/credentials/partials/login.html",
 		"/Users/taylormcintyre/Documents/projects/jobagrob/server/plugins/validation-augments.js",
-		"/Users/taylormcintyre/Documents/projects/jobagrob/server/schemas/company-model.js",
 		"/Users/taylormcintyre/Documents/projects/jobagrob/public/views/application/application.html",
 		"/Users/taylormcintyre/Documents/projects/jobagrob/public/views/credentials/partials/signup.html",
-		"/Users/taylormcintyre/Documents/projects/jobagrob/server/schemas/account-model.js",
-		"/Users/taylormcintyre/Documents/projects/jobagrob/server/plugins/validation-regexp.js",
-		"/Users/taylormcintyre/Documents/projects/jobagrob/server/schemas/account-shared-schema.js",
-		"/Users/taylormcintyre/Documents/projects/jobagrob/server/routes.js",
 		"/Users/taylormcintyre/Documents/projects/jobagrob/public/views/credentials/partials/credentials.html",
 		"/Users/taylormcintyre/Documents/projects/jobagrob/client/index.html",
 		"/Users/taylormcintyre/Documents/projects/jobagrob/static/public/views/credentials/partials/credentials.html",
@@ -240,38 +251,12 @@
 		"/Users/taylormcintyre/Documents/projects/jobagrob/mockups/login.png",
 		"/Users/taylormcintyre/Documents/projects/jobagrob/mockups/login.ai",
 		"/Users/taylormcintyre/Documents/projects/jobagrob/index.html",
-		"/Users/taylormcintyre/Documents/projects/jobagrob/config.rb",
 		"/Users/taylormcintyre/Documents/projects/jobagrob/assets/stylesheets/styles.css",
 		"/Users/taylormcintyre/Documents/projects/jobagrob/assets/stylesheets/main.css",
 		"/Users/taylormcintyre/Documents/projects/jobagrob/assets/stylesheets/login.css",
 		"/Users/taylormcintyre/Documents/projects/jobagrob/assets/sass/main.sass",
 		"/Users/taylormcintyre/Documents/projects/jobagrob/assets/sass/login.sass",
-		"/Users/taylormcintyre/Documents/projects/jobagrob/assets/sass/credentials.sass",
-		"/Users/taylormcintyre/Documents/projects/jobagrob/api/account-abstract-model.js",
-		"/Users/taylormcintyre/Documents/projects/jobagrob/assets/stylesheets/credentials.css",
-		"/Users/taylormcintyre/Documents/projects/jobagrob/assets/sass/styles.sass",
-		"/Users/taylormcintyre/Documents/projects/jobagrob/js/services.coffee",
-		"/Users/taylormcintyre/Documents/projects/jobagrob/js/routes.coffee",
-		"/Users/taylormcintyre/Documents/projects/jobagrob/views/login/partials/login.html",
-		"/Users/taylormcintyre/Documents/projects/jobagrob/views/login/partials/signup.html",
-		"/Users/taylormcintyre/Documents/projects/jobagrob/views/login/partials/sign-in.html",
-		"/Users/alitorbati/Documents/Projects/jobagrob/jobagrob.sublime-project",
-		"/Users/alitorbati/Documents/Projects/jobagrob/js/routes.coffee",
-		"/Users/taylormcintyre/Documents/projects/Jobagrob/config.rb",
-		"/Users/taylormcintyre/Documents/projects/Jobagrob/index.html",
-		"/Users/taylormcintyre/Documents/projects/Jobagrob/README.md",
-		"/Users/taylormcintyre/Documents/projects/Jobagrob/server.js",
-		"/Users/taylormcintyre/Documents/projects/Jobagrob/assets/stylesheets/styles.css",
-		"/Users/taylormcintyre/Documents/projects/Jobagrob/sass/screen.scss",
-		"/Users/taylormcintyre/Documents/projects/Jobagrob/views/login/partials/login.html",
-		"/Users/taylormcintyre/Documents/projects/Jobagrob/assets/stylesheets/login.sass",
-		"/Users/taylormcintyre/Documents/projects/Jobagrob/assets/stylesheets/styles.sass",
-		"/Users/taylormcintyre/Documents/projects/Jobagrob/views/generator/controllers/generator.coffee",
-		"/Users/taylormcintyre/Documents/projects/Jobagrob/jobagrob.sublime-project",
-		"/Users/taylormcintyre/Documents/projects/Jobagrob/views/generator/controllers/main.js",
-		"/Users/taylormcintyre/Documents/projects/Jobagrob/views/generator/controllers/main.coffee",
-		"/Users/taylormcintyre/Documents/projects/Jobagrob/views/main/controllers/main.js",
-		"/Users/taylormcintyre/Documents/projects/Jobagrob/modules/generator/generator.html"
+		"/Users/taylormcintyre/Documents/projects/jobagrob/assets/sass/credentials.sass"
 	],
 	"find":
 	{
@@ -279,7 +264,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 93.0,
+		"height": 0.0,
 		"where_history":
 		[
 			"/Users/taylormcintyre/Documents/projects/jobagrob",
@@ -292,6 +277,32 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"multi",
+			"mid-wrapper",
+			"open-sans",
+			"bitter",
+			"wrapper",
+			"15px",
+			"span",
+			"absolute",
+			"button mobile-no-float",
+			"light-green",
+			"mobile-",
+			"mobile-reset",
+			"mobile-re",
+			"@media",
+			"suggestions",
+			"job-status",
+			"company-logo",
+			"last",
+			"user.fir",
+			"company.name\n",
+			"company.name",
+			"account-model",
+			"mongoose",
+			"findOne",
+			"monitor",
+			"route",
 			"module",
 			"grunt.file.copy",
 			"copy",
@@ -393,33 +404,7 @@
 			"pre",
 			"pre-existing",
 			"'",
-			"own use",
-			"system",
-			"add app",
-			"who created the ",
-			"Cash",
-			"large app",
-			"ante",
-			"digialize",
-			"1020",
-			"#post",
-			".1",
-			"cursor: pointer",
-			"nav",
-			"255",
-			"overflow: visible",
-			"[image-slider]",
-			"screen",
-			"screen-width",
-			"$screen-width",
-			"960",
-			"padding-bottom",
-			"padding-top",
-			"padding-bottom",
-			"large-screen",
-			"$large-screen-golden",
-			"$small-screen-golden",
-			"960"
+			"own use"
 		],
 		"highlight": false,
 		"in_selection": false,
@@ -437,28 +422,28 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 4,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "target/assets/scripts/routes.js",
+					"file": "dev/assets/scripts/routes.coffee",
 					"settings":
 					{
-						"buffer_size": 967,
+						"buffer_size": 1067,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								531,
-								531
+								824,
+								831
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"syntax": "Packages/CoffeeScript/Syntaxes/CoffeeScript.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
@@ -470,25 +455,24 @@
 				},
 				{
 					"buffer": 1,
-					"file": "Gruntfile.js",
+					"file": "dev/assets/views/job/partials/job.html",
 					"settings":
 					{
-						"buffer_size": 3728,
+						"buffer_size": 1080,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								569,
-								569
+								866,
+								854
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -498,25 +482,24 @@
 				},
 				{
 					"buffer": 2,
-					"file": "web.js",
+					"file": "dev/assets/views/job/partials/view-job.html",
 					"settings":
 					{
-						"buffer_size": 2779,
+						"buffer_size": 96,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								371,
-								371
+								96,
+								96
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"auto_name": "{{job.title}}",
+							"syntax": "Packages/HTML/HTML.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -526,23 +509,23 @@
 				},
 				{
 					"buffer": 3,
-					"file": "/Users/taylormcintyre/Documents/projects/jobagrob-old/server/routes.js",
+					"file": "dev/assets/views/job/controllers/job.coffee",
 					"settings":
 					{
-						"buffer_size": 4262,
+						"buffer_size": 580,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								814,
-								814
+								285,
+								285
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"syntax": "Packages/CoffeeScript/Syntaxes/CoffeeScript.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
@@ -553,100 +536,46 @@
 				},
 				{
 					"buffer": 4,
-					"file": "/Users/taylormcintyre/Documents/projects/jobagrob-old/server/schemas/account-model.js",
+					"file": "/Users/taylormcintyre/Documents/projects/taylor-portfolio/dev/json/projects.json",
 					"settings":
 					{
-						"buffer_size": 2485,
+						"buffer_size": 11024,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								669,
+								669
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
-						"translation.x": 0.0,
-						"translation.y": 658.0,
+						"translation.x": 371.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 5,
-					"file": "/Users/taylormcintyre/Documents/projects/jobagrob-old/server.js",
+					"file": "dev/assets/scripts/services.coffee",
 					"settings":
 					{
-						"buffer_size": 1955,
+						"buffer_size": 1328,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "config.rb",
-					"settings":
-					{
-						"buffer_size": 23,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								23,
-								23
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "dev/assets/scripts/routes.coffee",
-					"settings":
-					{
-						"buffer_size": 830,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								576,
-								576
+								436,
+								436
 							]
 						],
 						"settings":

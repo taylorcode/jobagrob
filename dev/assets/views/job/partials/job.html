@@ -1,14 +1,33 @@
 <form ng-submit="createJob(job)">
-	<input type="text" ng-model="job.title">
-	<textarea ng-model="job.shortDescription"></textarea>
-	<textarea ng-model="job.longDescription"></textarea>
-	<div>Type:</div>
+	<fieldset>
 
-	<select ng-model="job.type" ng-init="job.type = job.type || info.types[0]" ng-options="type as type for type in info.types">
-	</select>
+		<legend>Create a new Job</legend>
 
-	<div>Industry:</div>
-	<select ng-model="job.industry" ng-init="job.industry = job.industry || info.industries[0]" ng-options="industry as industry for industry in info.industries">
-	</select>
-	<input type="submit" value="Create Job">
+		<label for="job-title">
+			<input id="job-title" type="text" ng-model="job.title" placeholder="Title of New Job Posting">
+		</label>
+
+		<label for="job-short-description">
+			<span>Short Description</span>
+			<textarea id="job-short-description" ng-model="job.shortDescription"></textarea>
+		</label>
+
+		<label for="job-long-description">
+			<span>Long Description</span>
+			<textarea id="job-long-description" ng-model="job.longDescription"></textarea>
+		</label>
+
+		<label for="job-type">
+			<span>Type</span>
+			<select id="job-type" ng-model="job.type" ng-init="job.type = job.type || info.types[0]" ng-options="type as type for type in info.types"></select>
+		</label>
+
+		<label for="job-industry">
+			<span>Industry</span>
+			<select id="job-industry" ng-model="job.industry" ng-init="job.industry = job.industry || info.industries[0]" ng-options="industry as industry for industry in info.industries"></select>
+		</label>
+
+		<input type="submit" value="Create Job">
+
+	</fieldset>
 </form>

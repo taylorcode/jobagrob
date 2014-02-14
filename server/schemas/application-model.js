@@ -24,7 +24,7 @@ elemSchema.input = elemSchema.textarea.extend({
   fieldType: {
     type: String,
     enum: ['text', 'email', 'number']
-  },
+  }
 });
 
 elemSchema.select = elemSchema.fields.extend({
