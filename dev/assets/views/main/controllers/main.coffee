@@ -1,4 +1,4 @@
-jobagrob.controller('Main', ($scope) ->
+jobagrob.controller 'Main', ($scope) ->
 	console.log 'Main View'
 	$scope.jobs = [
 		title: 'New Back-End Development'
@@ -28,5 +28,3 @@ jobagrob.controller('Main', ($scope) ->
 		company: 'Microsoft'
 		location: 'Kentucky, CA'
 	]
-
-)

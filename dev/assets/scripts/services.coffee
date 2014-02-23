@@ -16,6 +16,9 @@ jobagrob.factory 'signUp', ($resource) ->
 .factory 'application', ($resource) ->
   $resource 'api/jobs/:id/application', id: '@id'
 
+.factory 'resumes', ($resource) ->
+  $resource 'api/account/resumes'
+
 .factory 'extract', () ->
   application: (a) ->
     a = angular.copy a

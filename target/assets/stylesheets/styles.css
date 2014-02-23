@@ -255,6 +255,47 @@ h1, h3 {
     clear: both !important;
   }
 }
+/* line 2, ../../../dev/assets/views/account/stylesheets/_account.sass */
+.item-tab-panes nav {
+  float: left;
+  background: #26849e;
+  color: white;
+  padding: 15px;
+}
+/* line 7, ../../../dev/assets/views/account/stylesheets/_account.sass */
+.item-tab-panes > div {
+  padding: 20px;
+  background: white;
+}
+/* line 10, ../../../dev/assets/views/account/stylesheets/_account.sass */
+.item-tab-panes fieldset {
+  border: 1px solid #f1f1f1;
+}
+/* line 12, ../../../dev/assets/views/account/stylesheets/_account.sass */
+.item-tab-panes fieldset .item-controls-bar {
+  background: #bfbfbf;
+}
+/* line 14, ../../../dev/assets/views/account/stylesheets/_account.sass */
+.item-tab-panes fieldset .item-controls-bar div {
+  float: right;
+}
+/* line 16, ../../../dev/assets/views/account/stylesheets/_account.sass */
+.item-tab-panes fieldset .item-controls-bar div a {
+  cursor: pointer;
+}
+/* line 18, ../../../dev/assets/views/account/stylesheets/_account.sass */
+.item-tab-panes fieldset label {
+  overflow: hidden;
+  display: block;
+}
+/* line 21, ../../../dev/assets/views/account/stylesheets/_account.sass */
+.item-tab-panes fieldset label span {
+  width: 150px;
+  padding: 15px;
+  float: left;
+  background: #d3d1d1;
+}
+
 /* line 1, ../../../dev/assets/views/credentials/stylesheets/_credentials.sass */
 #intro-text {
   display: inline-block;

@@ -10,7 +10,25 @@
     <title>Jobagrob</title>
 </head>
 
-<body ontouchstart>
+<body ontouchstart ng-controller="Jobagrob as jobagrob">
+
+    <header id="navigation-bar" ng-if="showHeader">
+        <a href="#/" class="home-logo">Jobagrob</a>
+        <nav>
+            <a>
+                <i class="dashboard-icon"></i>
+                <span>Dashboard</span>
+            </a>
+            <a>
+                <i class="jobs-icon"></i>
+                <span>Jobs</span>
+            </a>
+            <a>
+                <i class="profile-icon"></i>
+                <span>Profile</span>
+            </a>
+        </nav>
+    </header>
 
     <div ng-view></div>
 

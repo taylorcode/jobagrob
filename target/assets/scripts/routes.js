@@ -21,6 +21,10 @@
     }).when('/jobs/:id/edit', {
       templateUrl: 'assets/views/job/partials/job.html',
       controller: 'EditJob'
+    }).when('/account', {
+      templateUrl: 'assets/views/account/partials/account.html',
+      controller: 'Account',
+      controllerAs: 'account'
     }).otherwise({
       templateUrl: 'assets/views/main/partials/main.html',
       controller: 'Main'

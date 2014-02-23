@@ -92,7 +92,7 @@
 			"file": "/Users/taylormcintyre/Documents/projects/taylor-portfolio/dev/json/projects.json",
 			"settings":
 			{
-				"buffer_size": 11024,
+				"buffer_size": 11079,
 				"line_ending": "Unix"
 			}
 		},
@@ -101,6 +101,38 @@
 			"settings":
 			{
 				"buffer_size": 1328,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "server/routes.js",
+			"settings":
+			{
+				"buffer_size": 276,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "server/routes/account-routes.js",
+			"settings":
+			{
+				"buffer_size": 1599,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "server/routes/job-routes.js",
+			"settings":
+			{
+				"buffer_size": 1652,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/taylormcintyre/Documents/projects/upload-test/public/javascripts/imageupload.js",
+			"settings":
+			{
+				"buffer_size": 11838,
 				"line_ending": "Unix"
 			}
 		}
@@ -422,7 +454,7 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 9,
 			"sheets":
 			[
 				{
@@ -437,8 +469,8 @@
 						"selection":
 						[
 							[
-								824,
-								831
+								261,
+								261
 							]
 						],
 						"settings":
@@ -539,15 +571,15 @@
 					"file": "/Users/taylormcintyre/Documents/projects/taylor-portfolio/dev/json/projects.json",
 					"settings":
 					{
-						"buffer_size": 11024,
+						"buffer_size": 11079,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								669,
-								669
+								0,
+								0
 							]
 						],
 						"settings":
@@ -556,8 +588,8 @@
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
-						"translation.x": 371.0,
-						"translation.y": 0.0,
+						"translation.x": 0.0,
+						"translation.y": 4909.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -582,6 +614,115 @@
 						{
 							"syntax": "Packages/CoffeeScript/Syntaxes/CoffeeScript.tmLanguage",
 							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "server/routes.js",
+					"settings":
+					{
+						"buffer_size": 276,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								199,
+								199
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "server/routes/account-routes.js",
+					"settings":
+					{
+						"buffer_size": 1599,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								242,
+								242
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "server/routes/job-routes.js",
+					"settings":
+					{
+						"buffer_size": 1652,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								780,
+								780
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 480.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "/Users/taylormcintyre/Documents/projects/upload-test/public/javascripts/imageupload.js",
+					"settings":
+					{
+						"buffer_size": 11838,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,

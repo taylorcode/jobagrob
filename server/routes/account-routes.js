@@ -63,6 +63,11 @@ function setup (app) {
 		res.send(req.account);
 	});
 
+	app.post('/api/account/resumes', function (req, res, next) {
+		console.log('HOLLA ! GOT HERE');
+		console.log(req.files);
+	});
+
 }
 
 exports.setup = setup;

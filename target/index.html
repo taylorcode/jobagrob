@@ -9,7 +9,24 @@
         <title>Jobagrob</title>
     </head>
     
-    <body ontouchstart>
+    <body ontouchstart ng-controller="Jobagrob as jobagrob">
+        <header id="navigation-bar" ng-if="showHeader"> <a href="#/" class="home-logo">Jobagrob</a>
+
+            <nav>
+                <a> <i class="dashboard-icon"></i>
+ <span>Dashboard</span>
+
+                </a>
+                <a> <i class="jobs-icon"></i>
+ <span>Jobs</span>
+
+                </a>
+                <a> <i class="profile-icon"></i>
+ <span>Profile</span>
+
+                </a>
+            </nav>
+        </header>
         <div ng-view></div>
         <footer></footer>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -28,13 +45,17 @@
             }).call(this);
         </script>
         <script type="text/javascript" src="assets/scripts/routes.js"></script>
+        <script type="text/javascript" src="assets/scripts/directives/file-uploader.js"></script>
+        <script type="text/javascript" src="assets/scripts/main.js"></script>
         <script type="text/javascript" src="assets/scripts/modules/imageupload.js"></script>
         <script type="text/javascript" src="assets/scripts/services.js"></script>
+        <script type="text/javascript" src="assets/views/account/controllers/account.js"></script>
         <script type="text/javascript" src="assets/views/application/controllers/application.js"></script>
         <script type="text/javascript" src="assets/views/credentials/controllers/credentials.js"></script>
         <script type="text/javascript" src="assets/views/generator/controllers/generator.js"></script>
         <script type="text/javascript" src="assets/views/job/controllers/job.js"></script>
         <script type="text/javascript" src="assets/views/main/controllers/main.js"></script>
+        <script type="text/javascript" src="assets/views/resumes/controllers/resume.js"></script>
         <!--[if lt IE 9]>
             <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->

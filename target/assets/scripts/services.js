@@ -17,6 +17,8 @@
     return $resource('api/jobs/:id/application', {
       id: '@id'
     });
+  }).factory('resumes', function($resource) {
+    return $resource('api/account/resumes');
   }).factory('extract', function() {
     return {
       application: function(a) {
