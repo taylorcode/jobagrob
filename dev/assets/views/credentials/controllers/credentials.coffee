@@ -6,13 +6,8 @@ jobagrob.controller 'SignUp', ($scope, signUp) ->
 	createAccount = (account) ->
 		signUp.save _.omit account, ['confirmPassword']
 
-	$scope.signUpUser = (user) ->
-		user.type = 'user'
-		createAccount user
-
-	$scope.signUpCompany = (company) ->
-		company.type = 'company'
-		createAccount company
+	$scope.signUp = (account) ->
+		createAccount account
 
 
 jobagrob.controller 'LogIn', ($scope, logIn, checkLogIn, $location) ->

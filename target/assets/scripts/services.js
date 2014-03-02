@@ -17,8 +17,49 @@
     return $resource('api/jobs/:id/application', {
       id: '@id'
     });
-  }).factory('resumes', function($resource) {
-    return $resource('api/account/resumes');
+  }).factory('jgApi', function($resource) {
+    return {
+      resumes: $resource('api/account/resumes/:id', {
+        id: '@_id'
+      })
+    };
+  }).factory('modelResourceComparator', function() {
+    return {
+      compare: function(origs, currents, identifier) {
+        var added, deleted, id, updated;
+        updated = [];
+        deleted = [];
+        added = [];
+        id = identifier || '_id';
+        _.each(origs, function(orig) {
+          var cur, isDeleted, _i, _len;
+          isDeleted = true;
+          for (_i = 0, _len = currents.length; _i < _len; _i++) {
+            cur = currents[_i];
+            if (orig[id] === cur[id]) {
+              isDeleted = false;
+              if (!angular.equals(orig, cur)) {
+                updated.push(_.extend(orig, cur));
+                break;
+              }
+            }
+          }
+          if (isDeleted) {
+            return deleted.push(orig);
+          }
+        });
+        _.each(currents, function(cur) {
+          if (!cur[id]) {
+            return added.push(cur);
+          }
+        });
+        return {
+          updated: updated,
+          deleted: deleted,
+          added: added
+        };
+      }
+    };
   }).factory('extract', function() {
     return {
       application: function(a) {

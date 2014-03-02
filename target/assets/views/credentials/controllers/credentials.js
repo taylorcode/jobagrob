@@ -6,13 +6,8 @@
     createAccount = function(account) {
       return signUp.save(_.omit(account, ['confirmPassword']));
     };
-    $scope.signUpUser = function(user) {
-      user.type = 'user';
-      return createAccount(user);
-    };
-    return $scope.signUpCompany = function(company) {
-      company.type = 'company';
-      return createAccount(company);
+    return $scope.signUp = function(account) {
+      return createAccount(account);
     };
   });
 

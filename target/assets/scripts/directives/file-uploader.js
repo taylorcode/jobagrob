@@ -1,19 +1,14 @@
 (function() {
-  jobagrob.directive('jgFormData', function() {
+  jobagrob.directive('jgFiles', function() {
     return {
       restrict: 'A',
       scope: {
-        jgFormData: '='
+        jgFiles: '='
       },
       link: function(scope, element, attrs, ctrl) {
         return element.on('change', function(e) {
-          var formData;
-          formData = new FormData;
-          _.each(e.target.files, function(file) {
-            return formData.append('files', file, file.name);
-          });
           return scope.$apply(function() {
-            return scope.jgFormData = formData;
+            return scope.jgFiles = e.target.files;
           });
         });
       }

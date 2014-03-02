@@ -8,7 +8,7 @@
     this.$routeParams = $routeParams;
     this.headerlessRoutes = ['/login', '/signup'];
     $scope.$on('$locationChangeSuccess', function() {
-      if (jobagrob.headerlessRoutes.indexOf($location.path() === -1)) {
+      if (jobagrob.headerlessRoutes.indexOf($location.path()) === -1) {
         return $scope.showHeader = true;
       }
       return $scope.showHeader = false;

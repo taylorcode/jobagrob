@@ -16,8 +16,50 @@ jobagrob.factory 'signUp', ($resource) ->
 .factory 'application', ($resource) ->
   $resource 'api/jobs/:id/application', id: '@id'
 
-.factory 'resumes', ($resource) ->
-  $resource 'api/account/resumes'
+.factory 'jgApi', ($resource) ->
+  resumes: $resource 'api/account/resumes/:id', id: '@_id'
+
+
+.factory 'modelResourceComparator', () ->
+  compare: (origs, currents, identifier) ->
+      updated = []
+      deleted = []
+      added = []
+      id = identifier or '_id'
+
+      # if this original is not in the list of new, then delete it
+      _.each origs, (orig) ->
+        isDeleted = true
+        for cur in currents
+          # if they have the same id, but they are not equal, then update
+          if orig[id] is cur[id]
+            isDeleted = false
+            if not angular.equals orig, cur
+              updated.push _.extend(orig, cur) # want to make sure this is still a resource object, just with the updated values
+              break
+        deleted.push orig if isDeleted
+
+      _.each currents, (cur) ->
+        # if the cur has no id, then it's new, so add it
+        added.push cur if not cur[id]
+
+      updated: updated
+      deleted: deleted
+      added: added
+
+  # Example use:
+  # ------------------
+  # changed = modelResourceComparator.compare origResumes, rs
+  # log changed
+  # _.each changed.added, (item) ->
+  #   saved = resumes.save item, (newItem) ->
+  #     rs[rs.indexOf item] = new resumes newItem #update the item after it is saved so it is a resource object created form the result
+  # _.each changed.updated, (item) ->
+  #   item.$save()
+  # _.each changed.deleted, (item) ->
+  #   item.$delete()
+
+
 
 .factory 'extract', () ->
   application: (a) ->
@@ -27,7 +69,7 @@ jobagrob.factory 'signUp', ($resource) ->
         # these define what elements to keep based on the template
         keepers = {}
         keepers.textarea =  ['maxlength', 'placeholder']
-        keepers.input = ['fieldType'].concat(keepers.textarea)
+        keepers.input = ['fieldType'].concat keepers.textarea
         keepers.radio = ['opts']
         keepers.checkbox = keepers.radio
         keepers.select = keepers.radio

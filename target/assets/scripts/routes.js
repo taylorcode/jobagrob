@@ -1,5 +1,5 @@
 (function() {
-  window.jobagrob = angular.module('jobagrob', ['ngResource', 'ngRoute', 'ngTouch']).config(function($routeProvider, $locationProvider) {
+  window.jobagrob = angular.module('jobagrob', ['ngResource', 'ngRoute', 'ngTouch', 'angularFileUpload']).config(function($routeProvider, $locationProvider) {
     $routeProvider.when('/signup', {
       templateUrl: 'assets/views/credentials/partials/credentials.html',
       controller: 'SignUp'

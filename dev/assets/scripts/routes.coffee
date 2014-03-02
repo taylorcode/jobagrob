@@ -1,4 +1,4 @@
-window.jobagrob = angular.module('jobagrob', ['ngResource', 'ngRoute', 'ngTouch'])
+window.jobagrob = angular.module('jobagrob', ['ngResource', 'ngRoute', 'ngTouch', 'angularFileUpload'])
 
 .config ($routeProvider, $locationProvider) ->
   $routeProvider

@@ -25,7 +25,7 @@ app.configure(function () {
   app.use(express.static('target'));
   app.use(express.cookieParser());
   app.use(express.bodyParser());
-  app.use(express.session({ secret: 'keyboard cat' }));
+  app.use(express.session({ secret: 'keyboard cats' }));
   app.use(passport.initialize());
   app.use(passport.session());
   app.use(app.router);
@@ -34,23 +34,6 @@ app.configure(function () {
   app.use(logfmt.requestLogger());
 
 });
-
-
-
-app.post('/upload', function(req, res) {
-    var image =  req.files.image;
-    var newImageLocation = 'public/images/' + image.name;//path.join(__dirname, 'public/images', image.name);
-    
-    fs.readFile(image.path, function(err, data) {
-        fs.writeFile(newImageLocation, data, function(err) {
-            res.json(200, { 
-                src: 'images/' + image.name,
-                size: image.size
-            });
-        });
-    });
-});
-
 
 function clientErrorHandler(err, req, res, next) {
   if(err.statusCode) return res.send(err.statusCode, err);
@@ -99,7 +82,6 @@ passport.deserializeUser(function(id, done) {
 app.use(function(req, res) {
     res.sendfile('target/index.html');
 });
-
 
 app.listen(app.get('port'), function() {
   console.log('Listening on ' + app.get('port'));

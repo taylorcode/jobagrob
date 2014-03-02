@@ -1,0 +1,41 @@
+<form ng-controller="Resumes as rc">
+	<fieldset ng-repeat="resume in resumes.resumes">
+		<div class="item-controls-bar">
+			<div>
+				<a class="down-arrow">UP</a>
+				<a class="up-arrow">DN</a>
+				<a class="delete-button" ng-click="rc.removeResume(resume, resumes.resumes)">X</a>
+			</div>
+		</div>
+		<label>
+			<span>Title</span>
+			<input type="text" ng-model="resume.title">
+		</label>
+		<label>
+			<span>Tagline</span>
+			<input type="text" ng-model="resume.tagline">
+		</label>
+		<label>
+			<span>Resume</span>
+			
+			<input type="file" name="resume" ng-model="resume.fakePath" jg-files="resume.file">
+			{{resume.filename}}
+
+<!--  					<div>
+                <div class="well my-drop-zone" ng-show="uploader.isHTML5" ng-file-drop ng-file-over="another-file-over-class"></div>
+                <input ng-file-select type="file" multiple>
+        	</div>
+
+-->
+		</label>
+	</fieldset>
+
+	<button class="add-new-item" ng-click="rc.addResume(resumes.resumes)">+ Add New Resume</button>
+
+	<div class="item-form-controls">
+		<button ng-click="rc.revert()">back (no changes)</button>
+		<span>or</span>
+		<button ng-click="rc.saveResumes(resumes)" ng-disabled="!changed">Done</button>
+	</div>
+
+</form>
