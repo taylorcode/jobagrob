@@ -1,26 +1,16 @@
-jobagrob.controller 'SignUp', ($scope, signUp) ->
+jobagrob.controller 'SignUp', ($scope, jgApi) ->
 	log 'Sign Up'
 
-	$scope.template = 'signup'
-
-	createAccount = (account) ->
-		signUp.save _.omit account, ['confirmPassword']
-
 	$scope.signUp = (account) ->
-		createAccount account
+		jgApi.account.save _.omit account, ['confirmPassword']
 
 
-jobagrob.controller 'LogIn', ($scope, logIn, checkLogIn, $location) ->
-
-	$scope.template = 'login'
+jobagrob.controller 'LogIn', ($scope, jgApi, $location) ->
 
 	$scope.logIn = (credentials) ->
 		# prototype updates for callback handling via $promise: http://stackoverflow.com/questions/15531117/angularjs-1-1-3-resource-callback-error-and-success
-		logIn.save(credentials, () ->
-			$location.path '/'
+		jgApi.login.save credentials, (response) ->
+			# auth token - if implement oAuth
+			$location.path '/main'
 		, () ->
 			alert 'TODO incorrect credentials'
-		)
-
-	$scope.checkLogIn = () ->
-		checkLogIn.save(id: 'sf3rsfsdfsfdkj')

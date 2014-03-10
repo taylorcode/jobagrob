@@ -1,28 +1,17 @@
 (function() {
-  jobagrob.controller('SignUp', function($scope, signUp) {
-    var createAccount;
+  jobagrob.controller('SignUp', function($scope, jgApi) {
     log('Sign Up');
-    $scope.template = 'signup';
-    createAccount = function(account) {
-      return signUp.save(_.omit(account, ['confirmPassword']));
-    };
     return $scope.signUp = function(account) {
-      return createAccount(account);
+      return jgApi.account.save(_.omit(account, ['confirmPassword']));
     };
   });
 
-  jobagrob.controller('LogIn', function($scope, logIn, checkLogIn, $location) {
-    $scope.template = 'login';
-    $scope.logIn = function(credentials) {
-      return logIn.save(credentials, function() {
-        return $location.path('/');
+  jobagrob.controller('LogIn', function($scope, jgApi, $location) {
+    return $scope.logIn = function(credentials) {
+      return jgApi.login.save(credentials, function(response) {
+        return $location.path('/main');
       }, function() {
         return alert('TODO incorrect credentials');
-      });
-    };
-    return $scope.checkLogIn = function() {
-      return checkLogIn.save({
-        id: 'sf3rsfsdfsfdkj'
       });
     };
   });

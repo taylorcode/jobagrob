@@ -1,23 +1,19 @@
-jobagrob.factory 'signUp', ($resource) ->
-	$resource 'api/signup'
-
-.factory 'logIn', ($resource) ->
-	$resource 'api/login'
-
-.factory 'checkLogIn', ($resource) ->
-	$resource 'api/checklogin'
-
-.factory 'job', ($resource) ->
-  $resource 'api/jobs/:id', id: '@id'
-
-.factory 'generator', ($resource) ->
+jobagrob.factory 'generator', ($resource) ->
 	$resource 'api/jobs/:id/generator', id: '@job'
 
 .factory 'application', ($resource) ->
   $resource 'api/jobs/:id/application', id: '@id'
 
 .factory 'jgApi', ($resource) ->
-  resumes: $resource 'api/account/resumes/:id', id: '@_id'
+  resumes: $resource 'api/account/resumes/', id: '@_id'
+  job: $resource 'api/jobs/:_id', _id: '@_id'
+  jobBookmarks: $resource '/api/account/jobs/bookmarks/:_id', _id: '@_id'
+  jobs: $resource 'api/jobs/search/:search', search: '@search'
+  user: $resource 'api/user/:id', search: '@_id'
+  company: $resource 'api/company/:id', search: '@_id'
+  account: $resource 'api/account'
+  login: $resource 'api/login'
+  # bookmark: $resource 'api/jobs/:_id/bookmark', _id: '@_id'
 
 
 .factory 'modelResourceComparator', () ->

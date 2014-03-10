@@ -22,14 +22,6 @@ var AccountSchema = new Schema({
         maxLength: 30,
         trim: true
     },
-    // details: {
-    //     type: Schema.Types.Mixed,
-    //     set: function (v) {
-    //         // do the validation of the model outside of this schema
-    //         var model = mongoose.model(v.type, detailsSchema[v.type]);
-    //         return new model(v);
-    //     }
-    // },
     company: {
         name: {
             type: String,
@@ -50,6 +42,14 @@ var AccountSchema = new Schema({
             // required: true,
             maxLength: 60,
             trim: true
+        },
+        jobs: {
+          bookmarked: [{
+            type: Schema.ObjectId,
+            unique: true,
+            ref: 'Job'
+          }]
+          // applied for 
         },
         resumes: {
             someValue: String,

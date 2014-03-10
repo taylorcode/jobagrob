@@ -1,25 +1,39 @@
-baseJobCtrl = ($scope, job, $routeParams) ->
+baseJobCtrl = ($scope, jgApi) ->
 
 	$scope.info = 
 	    types: ['programming', 'farming', 'eating']
 	    industries: ['tech', 'agriculture']
 
-  $scope.createJob = (j) ->
+	@createJob = (j) ->
+		jgApi.job.save j, (j) ->
+			log angular.toJson j
 
-    job.save j, (j) ->
-      console.log angular.toJson j
+	@
 
-getJobCtrl = ($scope, job, $routeParams) ->
-
-	job.get id: $routeParams.id, (j) ->
-		$scope.job = j
+getJobCtrl = ($scope, job) ->
+	log job
+	$scope.job = job
+	@
 
 
 jobagrob.controller 'Job', baseJobCtrl
 
-jobagrob.controller 'EditJob', ($scope, job, $routeParams) ->
+jobagrob.controller 'EditJob', ($scope, jgApi, job) ->
 
-	baseJobCtrl.call @, $scope, job, $routeParams
-	getJobCtrl.call @, $scope, job, $routeParams
+	getJobCtrl.call @, $scope, job
+	baseJobCtrl.call @, $scope, jgApi
 
-jobagrob.controller 'ViewJob', getJobCtrl
+	@
+
+jobagrob.controller 'ViewJob', ($scope, job, jgApi, $stateParams) ->
+	getJobCtrl.call @, $scope, job
+
+	# $scope.bookmarks = jgApi.jobBookmarks.query() GET BOOKMARKS
+
+	$scope.bookmarkStatus = jgApi.jobBookmarks.get(_id: $stateParams.id)
+
+	@bookmark = (job) ->
+		$scope.bookmarkStatus.$save()
+		#jgApi.jobBookmarks.save _id: job._id # TODO priority is not used but may be
+
+	@

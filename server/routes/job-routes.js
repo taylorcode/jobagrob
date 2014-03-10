@@ -1,15 +1,18 @@
 var handler = require('restify-errors'),
 	Job = require('../schemas/job-model'),
-	formatResponse = require('../plugins/response-formatter.js');
+	formatResponse = require('../plugins/response-formatter.js'),
+	_ = require('underscore');
+
 
 
 function setup (app) {
-
 
 	/* Create a job -- on client it is "jobs/new" */
 	app.post('/api/jobs', function (req, res, next) {
 
 		var job = new Job(req.body);
+
+		job._creator = req.user._id;
 
 		job.save(function (err, job) {
 			if(err) return next(err);
@@ -27,14 +30,16 @@ function setup (app) {
 		});
 	});
 
-	// /* Search for a job */
-	// app.get('/api/jobs/:search', function (req, res, next) {
+	/* Search for a job */
+	app.get('/api/jobs/search/:search', function (req, res, next) {
 
-	// 	res.send({
-	// 		results: 'CAT!'
-	// 	});
+		var search = req.params.search;
 
-	// });
+		Job.textSearch(search, function (err, jobs) {
+			res.send(jobs);
+		});
+
+	});
 
 	/* Create application for job */
 	app.post('/api/jobs/:id/generator', function (req, res, next) {

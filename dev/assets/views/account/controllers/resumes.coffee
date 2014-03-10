@@ -50,5 +50,5 @@ jobagrob.controller 'Resumes', ($scope, jgApi, $http, $q, modelResourceComparato
 		.then ->
 			rs.$save()
 			setOrigResumes()
-			$scope.changed = false # TODO - this should just call the comparator again
+			$scope.changed = false # TODO possible, should this should just call the comparator again
 	@

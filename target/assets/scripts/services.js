@@ -1,15 +1,5 @@
 (function() {
-  jobagrob.factory('signUp', function($resource) {
-    return $resource('api/signup');
-  }).factory('logIn', function($resource) {
-    return $resource('api/login');
-  }).factory('checkLogIn', function($resource) {
-    return $resource('api/checklogin');
-  }).factory('job', function($resource) {
-    return $resource('api/jobs/:id', {
-      id: '@id'
-    });
-  }).factory('generator', function($resource) {
+  jobagrob.factory('generator', function($resource) {
     return $resource('api/jobs/:id/generator', {
       id: '@job'
     });
@@ -19,9 +9,26 @@
     });
   }).factory('jgApi', function($resource) {
     return {
-      resumes: $resource('api/account/resumes/:id', {
+      resumes: $resource('api/account/resumes/', {
         id: '@_id'
-      })
+      }),
+      job: $resource('api/jobs/:_id', {
+        _id: '@_id'
+      }),
+      jobBookmarks: $resource('/api/account/jobs/bookmarks/:_id', {
+        _id: '@_id'
+      }),
+      jobs: $resource('api/jobs/search/:search', {
+        search: '@search'
+      }),
+      user: $resource('api/user/:id', {
+        search: '@_id'
+      }),
+      company: $resource('api/company/:id', {
+        search: '@_id'
+      }),
+      account: $resource('api/account'),
+      login: $resource('api/login')
     };
   }).factory('modelResourceComparator', function() {
     return {

@@ -1,3 +1,5 @@
+/// DEPRACATED
+
 var mongoose = require('mongoose'),
     Schema = mongoose.Schema,
     validate = require('../plugins/validation-regexp.js'),
@@ -31,7 +33,14 @@ var UserSchema = AccountSchema.extend({
             trim: true
         },
         url: String
-    }]
+    }],
+    jobs: {
+      bookmarked: [{
+        type: Schema.ObjectId,
+        ref: 'Job'
+      }]
+      // applied for 
+    }
 });
 
 module.exports = mongoose.model('User', UserSchema);

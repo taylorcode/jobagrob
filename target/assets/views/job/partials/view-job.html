@@ -1,9 +1,13 @@
 {{job.title}}
 
-{{job.shortDescription}}
+{{job.summary}}
 
-{{job.longDescription}}
+{{job.details}}
 
 {{job.type}}
 
 {{job.industry}}
+
+{{bookmarks}}
+
+<button class="button" ng-click="viewJob.bookmark(job)" ng-class="{bookmarked: bookmarkStatus.isBookmarked}">Bookmark</button>

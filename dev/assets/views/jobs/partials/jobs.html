@@ -1,0 +1,13 @@
+<h1>Search for a Job</h1>
+<input type="text" ng-model="search">
+
+<ul>
+	<li ng-repeat="job in jobs.results | orderBy: 'score'">
+
+		<div>{{job.obj.type}}</div>
+		<div>{{job.obj.industry}}</div>
+		<div>{{job.obj.summary}}</div>
+		<div>{{job.obj._id}}</div>
+		<a class="button" ng-href="/jobs/{{job.obj._id}}">View Job</a>
+	</li>
+</ul>

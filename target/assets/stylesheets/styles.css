@@ -106,7 +106,7 @@ body h1, body h2, body h3, body h4, body h5, body span, body em, body strong, bo
 }
 
 /* line 44, ../../../dev/assets/stylesheets/styles.sass */
-[ng-view] {
+#account-view {
   width: 1080px;
   max-width: 100%;
   margin: 0 auto;
@@ -368,6 +368,11 @@ h1, h3 {
   line-height: 25px;
 }
 
+/* line 1, ../../../dev/assets/views/job/stylesheets/job.sass */
+.bookmarked {
+  background: blue;
+}
+
 /* line 1, ../../../dev/assets/views/main/stylesheets/_main.sass */
 #navigation-bar {
   margin-top: 15px;
@@ -459,14 +464,9 @@ h1, h3 {
   display: inline-block;
   vertical-align: middle;
   padding: 10px 12px;
+  text-align: center;
 }
-@media screen and (max-width: 450px) {
-  /* line 63, ../../../dev/assets/views/main/stylesheets/_main.sass */
-  #active-jobs .job-status li .button-left-wrapper .button {
-    width: 100%;
-  }
-}
-/* line 70, ../../../dev/assets/views/main/stylesheets/_main.sass */
+/* line 69, ../../../dev/assets/views/main/stylesheets/_main.sass */
 #active-jobs .job-status li .button-left-wrapper:before {
   content: "";
   display: inline-block;
@@ -478,33 +478,37 @@ h1, h3 {
   #active-jobs .job-status li .button-left-wrapper {
     padding: 15px;
   }
-  /* line 77, ../../../dev/assets/views/main/stylesheets/_main.sass */
+  /* line 76, ../../../dev/assets/views/main/stylesheets/_main.sass */
   #active-jobs .job-status li .button-left-wrapper:before {
     content: none;
   }
+  /* line 79, ../../../dev/assets/views/main/stylesheets/_main.sass */
+  #active-jobs .job-status li .button-left-wrapper .button {
+    display: block;
+  }
 }
-/* line 81, ../../../dev/assets/views/main/stylesheets/_main.sass */
+/* line 83, ../../../dev/assets/views/main/stylesheets/_main.sass */
 #active-jobs .job-status li h4 {
   margin-top: 15px;
 }
-/* line 83, ../../../dev/assets/views/main/stylesheets/_main.sass */
+/* line 85, ../../../dev/assets/views/main/stylesheets/_main.sass */
 #active-jobs .job-status .job-extra {
   background: #f1f1f1;
   padding: 15px;
 }
-/* line 87, ../../../dev/assets/views/main/stylesheets/_main.sass */
+/* line 89, ../../../dev/assets/views/main/stylesheets/_main.sass */
 #active-jobs .company-logo {
   border: 1px solid #f1f1f1;
   float: left;
   margin: 15px;
 }
-/* line 91, ../../../dev/assets/views/main/stylesheets/_main.sass */
+/* line 93, ../../../dev/assets/views/main/stylesheets/_main.sass */
 #active-jobs .company-logo.-size-medium {
   margin-right: 15px;
   width: 50px;
   height: 50px;
 }
-/* line 95, ../../../dev/assets/views/main/stylesheets/_main.sass */
+/* line 97, ../../../dev/assets/views/main/stylesheets/_main.sass */
 #active-jobs .company-logo.-size-small {
   width: 30px;
   height: 30px;

@@ -1,4 +1,4 @@
-<form ng-submit="createJob(job)">
+<form ng-submit="job.createJob(job)">
 	<fieldset>
 
 		<legend>Create a new Job</legend>
@@ -7,14 +7,14 @@
 			<input id="job-title" type="text" ng-model="job.title" placeholder="Title of New Job Posting">
 		</label>
 
-		<label for="job-short-description">
-			<span>Short Description</span>
-			<textarea id="job-short-description" ng-model="job.shortDescription"></textarea>
+		<label for="job-summary">
+			<span>Summary</span>
+			<textarea id="job-summary" ng-model="job.summary"></textarea>
 		</label>
 
-		<label for="job-long-description">
-			<span>Long Description</span>
-			<textarea id="job-long-description" ng-model="job.longDescription"></textarea>
+		<label for="job-details">
+			<span>Details</span>
+			<textarea id="job-details" ng-model="job.details"></textarea>
 		</label>
 
 		<label for="job-type">

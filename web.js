@@ -74,7 +74,7 @@ passport.serializeUser(function(account, done) {
 });
 
 passport.deserializeUser(function(id, done) {
-  Account.findById(id, function (err, account) {
+  Account.findById(id).select('-password').exec(function(err, account) {
     done(err, account);
   });
 });

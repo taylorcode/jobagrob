@@ -64,9 +64,8 @@
 					display: inline-block
 					vertical-align: middle
 					padding: 10px 12px
+					text-align: center
 
-					@media screen and ($width-name : $mobile-width)
-						width: 100%
 				&:before
 					content: ''
 					display: inline-block
@@ -77,6 +76,9 @@
 					&:before
 						content: none
 					padding: $spacing
+					.button 
+						display: block
+
 
 			h4
 				margin-top: $spacing

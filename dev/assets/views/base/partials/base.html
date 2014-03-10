@@ -1,0 +1,34 @@
+<header id="navigation-bar" ng-switch on="accountType">
+
+    <a href="/main" class="home-logo">Jobagrob</a>
+    <nav ng-switch-when="user">
+        <a href="/main">
+            <i class="dashboard-icon"></i>
+            <span>Dashboard</span>
+        </a>
+        <a href="/jobs">
+            <i class="jobs-icon"></i>
+            <span>Jobs</span>
+        </a>
+        <a href="/profile">
+            <i class="profile-icon"></i>
+            <span>Profile</span>
+        </a>
+        <a href="/account">
+            <i class="account-icon"></i>
+            <span>Account</span>
+        </a>
+    </nav>
+
+    <nav ng-switch-when="company">
+        COMPANY NAV BAR
+    </nav>
+
+    <nav ng-switch-default>
+        NOT LOGGED IN USER
+        <a href="/login">LOG IN</a>
+    </nav>
+
+</header>
+
+<div id="account-view" ui-view></div>

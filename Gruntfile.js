@@ -109,7 +109,13 @@ module.exports = function (grunt) {
             },
             index: {
                 files: ['dev/index.html'],
-                tasks: ['htmlbuild']
+                tasks: ['htmlbuild'],
+            },
+            livereload: {
+                files: ['target/**/*'],
+                options: {
+                    livereload: true
+                }
             }
         }
         
