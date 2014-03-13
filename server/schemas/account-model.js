@@ -28,6 +28,17 @@ var AccountSchema = new Schema({
             //required: true,
             maxLength: 50,
             trim: true
+        },
+        jobs: {
+          created: [{
+            job: {
+                type: Schema.ObjectId,
+                ref: 'Job'
+            },
+            resume: {
+                filename: String
+            }
+          }]
         }
     },
     user: {
@@ -48,8 +59,16 @@ var AccountSchema = new Schema({
             type: Schema.ObjectId,
             unique: true,
             ref: 'Job'
+          }],
+          applied: [{
+            job: {
+                type: Schema.ObjectId,
+                ref: 'Job'
+            },
+            resume: {
+                filename: String
+            }
           }]
-          // applied for 
         },
         resumes: {
             someValue: String,
@@ -71,7 +90,6 @@ var AccountSchema = new Schema({
         }
     }
 });
-
 
 
 AccountSchema.pre('save', function (next) {
@@ -103,45 +121,6 @@ AccountSchema.methods.comparePassword = function (candidatePassword, cb) {
         cb(null, isMatch);
     });
 };
-
-// var UserSchema = AccountSchema.extend({
-//     firstName: {
-//         type: String,
-//         required: true,
-//         maxLength: 40,
-//         trim: true
-//     },
-//     lastName: {
-//         type: String,
-//         required: true,
-//         maxLength: 60,
-//         trim: true
-//     },
-//     resumes: [{
-//         title: {
-//             type: String,
-//             required: true,
-//             maxLength: 100, // TODO implement client-side
-//             minLength: 15,
-//             trim: true
-//         },
-//         tagline: {
-//             type: String,
-//             maxLength: 200, // TODO implement client-side
-//             trim: true
-//         },
-//         url: String
-//     }]
-// });
-
-// var CompanySchema = AccountSchema.extend({
-//     name: {
-//         type: String,
-//         required: true,
-//         maxLength: 50,
-//         trim: true
-//     }
-// });
 
 
 module.exports = mongoose.model('Account', AccountSchema);

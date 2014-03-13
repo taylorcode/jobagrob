@@ -80,17 +80,6 @@ window.jobagrob = angular.module('jobagrob', ['ngResource', 'ngRoute', 'ngTouch'
             $location.path '/login' # or 403 page
         # returns the promise
 
-  .state 'company',
-    templateUrl: 'assets/views/base/partials/company.html'
-    parent: 'base.account'
-    resolve:
-      company: ($rootScope, $q, $location) ->
-        # checks if the user is a user, else is company and redirects to login
-        $rootScope.accountPromise.then (account) ->
-          if not account.company
-            # $q.reject - want to cut off the promise chain, so we don't reject or it may call the error handlers (not in the view that is presented, but others.)
-            $location.path '/login' # or 403 page
-
   .state 'user.main',
     url: '/main'
     templateUrl: 'assets/views/main/partials/main.html'
@@ -105,6 +94,22 @@ window.jobagrob = angular.module('jobagrob', ['ngResource', 'ngRoute', 'ngTouch'
         # TODO - resumes is already on the account, which can be obtained with the promise
         jgApi.resumes.get().$promise
     #parent: 'user' this works too
+
+  .state 'company',
+    templateUrl: 'assets/views/base/partials/company.html'
+    parent: 'base.account'
+    resolve:
+      company: ($rootScope, $q, $location) ->
+        # checks if the user is a user, else is company and redirects to login
+        $rootScope.accountPromise.then (account) ->
+          if not account.company
+            # $q.reject - want to cut off the promise chain, so we don't reject or it may call the error handlers (not in the view that is presented, but others.)
+            $location.path '/login' # or 403 page
+
+  .state 'company.job',
+    url: '/job'
+    templateUrl: 'assets/views/job/partials/job.html'
+    controller: 'Job as job'
 
 
 

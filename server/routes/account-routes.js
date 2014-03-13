@@ -4,7 +4,8 @@ var passport = require('passport'),
 	formatResponse = require('../plugins/response-formatter.js');
 	path = require('path'),
 	fs = require('fs'),
-	ObjectId = require('mongoose').Types.ObjectId; 
+	ObjectId = require('mongoose').Types.ObjectId,
+	_ = require('underscore');
 
 function trueRandom () {
     return Math.random().toString(36).substring(7) + '-' + (+new Date()).toString(36);
@@ -215,7 +216,7 @@ function setup (app) {
 	});
 
 
-	// /* Bookmark a job on the users profile */
+	/* Bookmark a job on the users profile */
 	app.post('/api/account/jobs/bookmarks/:id', function (req, res, next) {
 
 		// req.body and req.params have the id property
@@ -273,6 +274,93 @@ function setup (app) {
 		});
 
 	});
+
+
+
+
+
+
+
+	/* Apply for a job on the users profile */
+	app.post('/api/account/jobs/bookmarks/:id', function (req, res, next) {
+
+		// req.body and req.params have the id property
+
+		var account = getAccount(req),
+			jobId = req.params.id;
+
+		account.exec(function (err, acct) {
+
+			var jobIndex,
+				bookmarked = acct.user.jobs.bookmarked,
+				isBookmarked;
+
+			if(err) return next(err);
+
+			// TODO safe CHECK if this job exists - USING $addToSet (preferably with mongoose plugin)
+			jobIndex = bookmarked.indexOf(jobId);
+
+			if(jobIndex === -1) {
+				isBookmarked = true;
+				bookmarked.push(jobId); // bookmark
+			} else {
+				isBookmarked = false;
+				bookmarked.splice(jobIndex, 1); // unbookmark
+			}
+
+			acct.save(function (err, acct) {
+				if(err) return next(err);
+				res.send({_id: jobId, isBookmarked: isBookmarked}); // return the reference to the new job bookmark or deleted job bookmark with the status
+			});
+		});
+
+	});
+
+	app.post('/api/account/jobs/applied/:id', function (req, res, next) {
+
+		var account = getAccount(req),
+			jobId = req.params.id;
+
+		account.exec(function (err, acct) {
+			if(err) return next(err);
+			var application, applied, existingApp;
+
+			application = {
+				job: jobId,
+				resume: {
+					filename: 'resumeFile.pdf'
+				}
+			};
+
+			applied = acct.user.jobs.applied;
+
+			existingApp = _.find(applied, function(a) { 
+				return String(a.job) === String(jobId); // cast to test to id equality
+			});
+
+			if(existingApp) applied.splice(applied.indexOf(existingApp), 1); // unapply - override
+
+			applied.push(application); // add apply
+
+			acct.save(function (err, acct) {
+				if(err) return next(err);
+				res.send(application);
+			});
+		});
+
+	});
+
+	app.get('/api/account/jobs/applied', function (req, res, next) {
+
+		var account = getAccount(req);
+
+		account.populate('user.jobs.applied.job').exec(function (err, acct) {
+			if(err) return next(err);
+			res.send(acct.user.jobs.applied);
+		});
+
+	});
+
 
 
 

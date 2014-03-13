@@ -33,6 +33,10 @@
     $scope.bookmarkStatus = jgApi.jobBookmarks.get({
       _id: $stateParams.id
     });
+    jgApi.jobApplied.save({
+      _id: $stateParams.id
+    });
+    $scope.appliedJobs = jgApi.jobApplied.query();
     this.bookmark = function(job) {
       return $scope.bookmarkStatus.$save();
     };

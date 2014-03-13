@@ -18,6 +18,9 @@
       jobBookmarks: $resource('/api/account/jobs/bookmarks/:_id', {
         _id: '@_id'
       }),
+      jobApplied: $resource('/api/account/jobs/applied/:_id', {
+        _id: '@_id'
+      }),
       jobs: $resource('api/jobs/search/:search', {
         search: '@search'
       }),

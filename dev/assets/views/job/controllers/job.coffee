@@ -32,6 +32,10 @@ jobagrob.controller 'ViewJob', ($scope, job, jgApi, $stateParams) ->
 
 	$scope.bookmarkStatus = jgApi.jobBookmarks.get(_id: $stateParams.id)
 
+	jgApi.jobApplied.save(_id: $stateParams.id)
+
+	$scope.appliedJobs = jgApi.jobApplied.query()
+
 	@bookmark = (job) ->
 		$scope.bookmarkStatus.$save()
 		#jgApi.jobBookmarks.save _id: job._id # TODO priority is not used but may be

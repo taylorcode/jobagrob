@@ -76,18 +76,6 @@
           });
         }
       }
-    }).state('company', {
-      templateUrl: 'assets/views/base/partials/company.html',
-      parent: 'base.account',
-      resolve: {
-        company: function($rootScope, $q, $location) {
-          return $rootScope.accountPromise.then(function(account) {
-            if (!account.company) {
-              return $location.path('/login');
-            }
-          });
-        }
-      }
     }).state('user.main', {
       url: '/main',
       templateUrl: 'assets/views/main/partials/main.html',
@@ -101,6 +89,22 @@
           return jgApi.resumes.get().$promise;
         }
       }
+    }).state('company', {
+      templateUrl: 'assets/views/base/partials/company.html',
+      parent: 'base.account',
+      resolve: {
+        company: function($rootScope, $q, $location) {
+          return $rootScope.accountPromise.then(function(account) {
+            if (!account.company) {
+              return $location.path('/login');
+            }
+          });
+        }
+      }
+    }).state('company.job', {
+      url: '/job',
+      templateUrl: 'assets/views/job/partials/job.html',
+      controller: 'Job as job'
     });
     $locationProvider.html5Mode(true);
     checkAuth = function($q, $location, $rootScope) {

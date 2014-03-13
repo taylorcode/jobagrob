@@ -60,7 +60,7 @@ passport.use(new LocalStrategy({
             if (err) return done(err);
 
             // TODO error handling here necessary?
-            if(!isMatch) return done(new handler.InvalidArgumentError('INCORRECT PASSWORD.'));
+            if(!isMatch) return done(new handler.InvalidArgumentError('invalid password.')); // TODO we should not reveal that the account exists
             // correct credentials
             return done(null, user);
         });
